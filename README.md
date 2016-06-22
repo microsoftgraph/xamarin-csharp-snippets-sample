@@ -9,6 +9,7 @@
 * [How the sample affects your account data](#how-the-sample-affects-your-tenant-data)
 * [Add a snippet](#add-a-snippet)
 * [Questions and comments](#questions)
+* [Contributing](#contributing")
 * [Additional resources](#additional-resources)
 
 <a name="introduction"></a>
@@ -163,6 +164,14 @@ Now you can test your snippet. When you run the app, your story will appear as a
 We'd love to get your feedback about the Microsoft Graph Snippets Sample for Xamarin.Forms project. You can send your questions and suggestions to us in the [Issues](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues) section of this repository.
 
 Your feedback is important to us. Connect with us on [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph). Tag your questions with [MicrosoftGraph].
+
+<a name="contributing"></a>
+## Contributing ##
+
+If you'd like to contribute to this sample, see CONTRIBUTING.MD.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
 
 <a name="additional-resources"></a>
 ## Additional resources ##
