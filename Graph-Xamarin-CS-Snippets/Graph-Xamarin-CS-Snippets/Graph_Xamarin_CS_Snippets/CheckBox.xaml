@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+See LICENSE in the project root for license information. -->
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Graph_Xamarin_CS_Snippets"
+             x:Class="Graph_Xamarin_CS_Snippets.CheckBox">
+
+  <ContentView.Padding>
+    10, 0
+  </ContentView.Padding>
+
+  <Frame x:Name="frame" OutlineColor="Accent">
+    <StackLayout Orientation="Horizontal" >
+      <Label x:Name="boxLabel" Text="&#x2610;" />
+      <Label x:Name="textLabel" />
+    </StackLayout>
+  </Frame>
+
+  <ContentView.GestureRecognizers>
+    <TapGestureRecognizer Tapped="OnCheckBoxTapped" />
+  </ContentView.GestureRecognizers>
+
+</ContentView>
