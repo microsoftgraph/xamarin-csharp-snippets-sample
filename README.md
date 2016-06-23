@@ -63,14 +63,14 @@ You can use the [Visual Studio Emulator for Android](https://www.visualstudio.co
 
 **Note:** If you see any errors while installing packages during step 2, make sure the local path where you placed the solution is not too long/deep. Moving the solution closer to the root of your drive resolves this issue.
 
-1. Open the App.cs file inside the **XamarinConnect (Portable)** project of the solution.
+1. Open the App.cs file inside the **Graph_Xamarin_CS_Snippets (Portable)** project of the solution.
 
-    ![](/readme-images/Appdotcs.png "Open App.cs file in XamarinConnect project")
+    ![Screenshot of the Solution Explorer pane in Visual Studio, with App.cs file selected in the Graph_Xamarin_CS_Snippets project](/readme-images/Appdotcs.png "Open App.cs file in Graph_Xamarin_CS_Snippets project")
 
 2. After you've loaded the solution in Visual Studio, configure the sample to use the client id that you registered by making this the value of the **ClientId** variable in the App.cs file.
 
 
-    ![](/readme-images/appId.png "Client ID value in App.cs file")
+    ![Screenshot of the ClientId variable in the App.cs file, currently set to an empty string.](/readme-images/appId.png "Client ID value in App.cs file")
 
 2.	If you are planning on signing into the sample with a work or school account that does not have admin permissions, you'll need to comment out  code that requests scopes that require admin permissions. If you don't comment out these lines, you won't be able to sign in with your work or school account (if you sign in with a personal account, these scope requests are ignored.)
 
@@ -84,7 +84,7 @@ You can use the [Visual Studio Emulator for Android](https://www.visualstudio.co
 
 3. Select the project that you want to run. If you select the Universal Windows Platform option, you can run the sample on the local machine. If you want to run the iOS project, you'll need to connect to a [Mac that has the Xamarin tools](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) installed on it. (You can also open this solution in Xamarin Studio on a Mac and run the sample directly from there.) You can use the [Visual Studio Emulator for Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) if you want to run the Android project. 
 
-    ![](/readme-images/SelectProject.png "Select project in Visual Studio")
+    ![Screenshot of the Visual Studio toolbar, with iOS selected as the start-up project.](/readme-images/SelectProject.png "Select project in Visual Studio")
 
 4. Press F5 to build and debug. Run the solution and sign in with either your personal or work or school account.
     > **Note** You might have to open the Build Configuration Manager to make sure that the Build and Deploy steps are selected for the UWP project.
