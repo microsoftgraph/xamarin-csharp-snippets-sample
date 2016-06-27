@@ -34,7 +34,8 @@ namespace Graph_Xamarin_CS_Snippets
                             {
                                 var token = await GetTokenForUserAsync();
                                 requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", token);
-
+                                // This header has been added to identify our sample in the Microsoft Graph service.  If extracting this code for your project please remove.
+                                requestMessage.Headers.Add("SampleID", "xamarin-csharp-snippets-sample");
                             }));
                     return graphClient;
                 }
