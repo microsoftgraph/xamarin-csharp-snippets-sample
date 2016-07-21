@@ -15,6 +15,7 @@ See LICENSE in the project root for license information. -->
     <StackLayout Orientation="Horizontal" >
       <Label x:Name="boxLabel" Text="&#x2610;" />
       <Label x:Name="textLabel" />
+      <Label x:Name="resultTextLabel" />
     </StackLayout>
   </Frame>
 

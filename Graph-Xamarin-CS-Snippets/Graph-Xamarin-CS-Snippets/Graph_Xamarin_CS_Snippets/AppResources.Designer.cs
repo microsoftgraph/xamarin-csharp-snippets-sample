@@ -323,6 +323,24 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to False.
+        /// </summary>
+        internal static string ResultFail {
+            get {
+                return ResourceManager.GetString("ResultFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to True.
+        /// </summary>
+        internal static string ResultSuccess {
+            get {
+                return ResourceManager.GetString("ResultSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to run selected.
         /// </summary>
         internal static string RunSelected {

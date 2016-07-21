@@ -101,10 +101,12 @@ namespace Graph_Xamarin_CS_Snippets
             if (result)
             {
                 this.frame.BackgroundColor = Color.Green;
+                this.resultTextLabel.Text = AppResources.ResultSuccess;
             }
             else
             {
                 this.frame.BackgroundColor = Color.Red;
+                this.resultTextLabel.Text = AppResources.ResultFail;
             }
         }
 
