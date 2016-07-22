@@ -204,6 +204,12 @@
   <data name="RenameFile" xml:space="preserve">
     <value>Rename File</value>
   </data>
+  <data name="ResultFail" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="ResultSuccess" xml:space="preserve">
+    <value>True</value>
+  </data>
   <data name="RunSelected" xml:space="preserve">
     <value>run selected</value>
   </data>
