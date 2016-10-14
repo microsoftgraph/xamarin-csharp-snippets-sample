@@ -1,31 +1,31 @@
-# Bibliothèque d’extraits de code du kit de développement Microsoft Graph pour Xamarin.Forms
+# <a name="microsoft-graph-sdk-snippets-library-for-xamarin.forms"></a>Bibliothèque d’extraits de code du kit de développement Microsoft Graph pour Xamarin.Forms
 
-##Sommaire
+##<a name="table-of-contents"></a>Sommaire
 
-* [Conditions préalables](#conditions-préalables)
-* [Enregistrement et configuration de l’application](#enregistrement-et-configuration-de-lapplication)
-* [Création et débogage](#création-et-débogage)
-* [Exécution de l’exemple](#exécution-de-lexemple)
-* [Impact de l’exemple sur les données de votre compte](#impact-de-lexemple-sur-les-données-de-votre-compte)
-* [Ajout d’un extrait de code](#ajout-dun-extrait-de-code)
-* [Questions et commentaires](#questions-et-commentaires)
-* [Contribution](#contribution)
-* [Ressources supplémentaires](#ressources-supplémentaires)
+* [Conditions préalables](#prerequisites)
+* [Enregistrement et configuration de l’application](#register)
+* [Création et débogage](#build)
+* [Exécution de l’exemple](#run)
+* [Impact de l’exemple sur les données de votre compte](#how-the-sample-affects-your-tenant-data)
+* [Ajout d’un extrait de code](#add-a-snippet)
+* [Questions et commentaires](#questions)
+* [Contribution](#contributing")
+* [Ressources supplémentaires](#additional-resources)
 
-<a name="introduction"></a> Cet exemple de projet constitue un référentiel des extraits de code qui utilisent Microsoft Graph pour effectuer des tâches courantes, telles que l’envoi des messages électroniques, la gestion des groupes et d’autres activités au sein d’une application Xamarin.Forms. Il utilise le [kit de développement logiciel Microsoft Graph .NET Client](https://github.com/microsoftgraph/msgraph-sdk-dotnet) pour fonctionner avec les données renvoyées par Microsoft Graph. 
+<a name="introduction"></a> Cet exemple de projet constitue un référentiel des extraits de code qui utilisent Microsoft Graph pour effectuer des tâches courantes, telles que l’envoi des messages électroniques, la gestion des groupes et d’autres activités au sein d’une application Xamarin.Forms. Il utilise le [kit de développement logiciel Microsoft Graph .NET Client](https://github.com/microsoftgraph/msgraph-sdk-dotnet) pour fonctionner avec les données renvoyées par Microsoft Graph. 
 
-L’exemple utilise la [bibliothèque d’authentification Microsoft (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) pour l’authentification. Le kit de développement logiciel MSAL offre des fonctionnalités permettant d’utiliser le [point de terminaison d’authentification v2](https://graph.microsoft.io/en-us/docs/authorization/converged_auth), qui permet aux développeurs d’écrire un flux de code unique qui gère l’authentification des comptes professionnels ou scolaires (Azure Active Directory) et personnels (Microsoft), y compris des comptes Office 365, Outlook.com et OneDrive.
+L’exemple utilise la [bibliothèque d’authentification Microsoft (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) pour l’authentification. Le kit de développement logiciel (SDK) MSAL offre des fonctionnalités permettant d’utiliser le [point de terminaison Azure AD v2.0](https://graph.microsoft.io/en-us/docs/authorization/converged_auth), qui permet aux développeurs d’écrire un flux de code unique qui gère l’authentification des comptes professionnels ou scolaires (Azure Active Directory) et personnels (Microsoft), y compris des comptes Office 365, Outlook.com et OneDrive.
 
-> **Remarque** Le kit de développement logiciel MSAL se trouve actuellement dans la version préliminaire et en tant que tel il ne doit pas être utilisé dans le code de production. Il est utilisé ici à titre indicatif uniquement.
+> **Remarque** Le kit de développement logiciel MSAL se trouve actuellement dans la version préliminaire et en tant que tel, il ne doit pas être utilisé dans le code de production. Il est utilisé ici à titre indicatif uniquement.
 
 L’application affiche l’interface utilisateur représentant les tâches courantes de l’utilisateur, ou « articles ». Chaque article est constitué d’un ou de plusieurs extraits de code. Les articles sont groupés par niveau d’autorisations et type de compte. L’utilisateur peut se connecter à son compte et exécuter les articles sélectionnés. Chaque article devient vert en cas de succès et rouge en cas d’échec. Des informations supplémentaires sont envoyées vers la fenêtre de sortie.
 
 <a name="prerequisites"></a>
-## Conditions préalables ##
+## <a name="prerequisites"></a>Conditions préalables ##
 
 Cet exemple nécessite les éléments suivants :  
 
-  * [Visual Studio 2015](https://www.visualstudio.com/downloads) 
+  * [Visual Studio 2015](https://www.visualstudio.com/downloads) 
   * [Xamarin pour Visual Studio](https://www.xamarin.com/visual-studio)
   * Windows 10 (avec [mode de développement](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx))
   * Soit un [compte Microsoft](https://www.outlook.com), soit un [compte Office 365 pour entreprise](https://msdn.microsoft.com/office/office365/howto/setup-development-environment#bk_Office365Account)
@@ -41,7 +41,7 @@ Si vous souhaitez exécuter le projet iOS dans cet exemple, vous avez besoin des
 Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) si vous souhaitez exécuter le projet Android.
 
 <a name="register"></a>
-##Enregistrement et configuration de l’application
+##<a name="register-and-configure-the-app"></a>Enregistrement et configuration de l’application
 
 1. Connectez-vous au [portail d’inscription des applications](https://apps.dev.microsoft.com/) en utilisant votre compte personnel, professionnel ou scolaire.
 2. Sélectionnez **Ajouter une application**.
@@ -58,18 +58,18 @@ Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.vis
 7. Cliquez sur **Enregistrer**.
 
 <a name="build"></a>
-## Création et débogage ##
+## <a name="build-and-debug"></a>Création et débogage ##
 
 **Remarque :** si vous constatez des erreurs pendant l’installation des packages à l’étape 2, vérifiez que le chemin d’accès local où vous avez sauvegardé la solution n’est pas trop long/profond. Pour résoudre ce problème, il vous suffit de déplacer la solution dans un dossier plus près du répertoire racine de votre lecteur.
 
 1. Ouvrez le fichier App.cs à l’intérieur du projet **Graph_Xamarin_CS_Snippets (Portable)** de la solution.
 
-    ![Capture d’écran du volet Explorateur de solutions dans Visual Studio, avec fichier App.cs sélectionné dans le projet Graph_Xamarin_CS_Snippets](../readme-images/Appdotcs.png "Fichier App.cs ouvert dans le projet Graph_Xamarin_CS_Snippets")
+    ![Capture d’écran du volet Explorateur de solutions dans Visual Studio, avec fichier App.cs sélectionné dans le projet Graph_Xamarin_CS_Snippets](/readme-images/Appdotcs.png "Fichier App.cs ouvert dans le projet Graph_Xamarin_CS_Snippets")
 
 2. Une fois que vous avez chargé la solution dans Visual Studio, configurez l’exemple pour utiliser l’ID client que vous avez enregistré en l’indiquant comme valeur de la variable **ClientId** dans le fichier App.cs.
 
 
-    ![Capture d’écran de la variable ClientId dans le fichier App.cs, actuellement définie sur une chaîne vide.](../readme-images/appId.png "Valeur d’ID client dans le fichier App.cs")
+    ![Capture d’écran de la variable ClientId dans le fichier App.cs, actuellement définie sur une chaîne vide.](/readme-images/appId.png "Valeur d’ID client dans le fichier App.cs")
 
 2.  Si vous envisagez de vous connecter à l’exemple avec un compte professionnel ou scolaire qui n’a pas les autorisations d’administrateur, vous devrez annuler le code demandant des étendues qui nécessitent des autorisations d’administrateur. Si vous n’annulez pas ces lignes, vous ne serez pas en mesure de vous connecter avec votre compte professionnel ou scolaire (si vous vous connectez avec un compte personnel, ces requêtes d’étendues sont ignorées.)
 
@@ -81,15 +81,15 @@ Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.vis
         "https://graph.microsoft.com/Group.ReadWrite.All",
     ```
 
-3. Sélectionnez le projet à exécuter. Si vous sélectionnez l’option Plateforme Windows universelle, vous pouvez exécuter l’exemple sur l’ordinateur local. Si vous souhaitez exécuter le projet iOS, vous devez vous connecter à un [Mac sur lequel les outils de Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) ont été installés. (Vous pouvez également ouvrir cette solution dans Xamarin Studio sur un Mac et exécuter l’exemple directement à partir de là.) Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) si vous souhaitez exécuter le projet Android. 
+3. Sélectionnez le projet à exécuter. Si vous sélectionnez l’option Plateforme Windows universelle, vous pouvez exécuter l’exemple sur l’ordinateur local. Si vous souhaitez exécuter le projet iOS, vous devez vous connecter à un [Mac sur lequel les outils de Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) ont été installés. (Vous pouvez également ouvrir cette solution dans Xamarin Studio sur un Mac et exécuter l’exemple directement à partir de là.) Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) si vous souhaitez exécuter le projet Android. 
 
-    ![Capture d’écran de la barre d’outils Visual Studio, avec iOS sélectionné comme projet de démarrage.](../readme-images/SelectProject.png "Sélectionnez le projet dans Visual Studio")
+    ![Capture d’écran de la barre d’outils Visual Studio, avec iOS sélectionné comme projet de démarrage.](/readme-images/SelectProject.png "Sélectionnez le projet dans Visual Studio").
 
 4. Appuyez sur F5 pour créer et déboguer l’application. Exécutez la solution et connectez-vous avec votre compte personnel, professionnel ou scolaire.
     > **Remarque** Vous devrez ouvrir le gestionnaire de configurations de build pour vous assurer que les étapes de création et de déploiement sont sélectionnées pour le projet UWP.
 
 <a name="run"></a>
-## Exécution de l’exemple
+## <a name="run-the-sample"></a>Exécution de l’exemple
 
 Une fois lancée, l’application affiche une liste représentant les tâches courantes de l’utilisateur ou « articles ». Chaque article est constitué d’un ou de plusieurs extraits de code. Les articles sont groupés par niveau d’autorisations et type de compte :
 
@@ -102,14 +102,14 @@ Sélectionnez les articles que vous souhaitez exécuter et cliquez sur le bouton
 Chaque article devient vert en cas de succès et rouge en cas d’échec. Des informations supplémentaires sont envoyées vers la fenêtre de sortie. 
 
 <a name="#how-the-sample-affects-your-tenant-data"></a>
-##Impact de l’exemple sur les données de votre compte
+##<a name="how-the-sample-affects-your-account-data"></a>Impact de l’exemple sur les données de votre compte
 
 Cet exemple exécute des commandes qui permettent de créer, lire, mettre à jour ou supprimer des données. Il ne modifie pas et ne supprime pas vos données de compte réelles. Toutefois, il peut créer et laisser des artefacts de données dans votre compte dans le cadre de son fonctionnement : lors de l’exécution des commandes de création, mise à jour ou suppression, l’exemple crée des entités fictives, telles que des utilisateurs ou des groupes, de façon à ne pas affecter vos données de compte réelles. 
 
 L’exemple peut épargner ces entités fictives dans votre compte, si vous choisissez des articles qui créent ou mettent à jour des entités. Par exemple, si vous choisissez d’exécuter l’article « mettre à jour un groupe », un groupe est créé, puis mis à jour. Dans ce cas, le nouveau groupe reste dans votre compte après l’exécution de l’exemple.
 
 <a name="add-a-snippet"></a>
-##Ajout d’un extrait de code
+##<a name="add-a-snippet"></a>Ajout d’un extrait de code
 
 Ce projet inclut deux fichiers d’extraits : 
 
@@ -158,14 +158,14 @@ Il peut arriver que votre article nécessite l’exécution d’extraits en plus
 Vous pouvez à présent tester votre extrait de code. Lorsque vous exécutez l’application, votre article s’affiche sous la forme d’un nouvel élément. Activez la case à cocher de votre extrait de code, puis exécutez-le. Utilisez cette option comme une opportunité pour déboguer votre extrait de code.
 
 <a name="questions"></a>
-## Questions et commentaires
+## <a name="questions-and-comments"></a>Questions et commentaires
 
 Nous serions ravis de connaître votre opinion sur l’exemple d’extraits de code Microsoft Graph pour Xamarin.Forms. Vous pouvez nous faire part de vos questions et suggestions dans la rubrique [Problèmes](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues) de ce référentiel.
 
 Votre avis compte beaucoup pour nous. Communiquez avec nous sur [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph). Posez vos questions avec la balise [MicrosoftGraph].
 
 <a name="contributing"></a>
-## Contribution ##
+## <a name="contributing"></a>Contribution ##
 
 Si vous souhaitez contribuer à cet exemple, voir [CONTRIBUTING.MD](/CONTRIBUTING.md).
 
@@ -173,14 +173,15 @@ Ce projet a adopté le [code de conduite Microsoft Open Source](https://opensour
 
 
 <a name="additional-resources"></a>
-## Ressources supplémentaires ##
+## <a name="additional-resources"></a>Ressources supplémentaires ##
 
-- [Autres exemples de connexion avec Microsoft Graph](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
-- [Présentation de Microsoft Graph](http://graph.microsoft.io)
+- [Autres exemples de connexion avec Microsoft Graph](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
+- [Présentation de Microsoft Graph](http://graph.microsoft.io)
 - [Exemples de code du développeur Office](http://dev.office.com/code-samples)
 - [Centre de développement Office](http://dev.office.com/)
 
 
-## Copyright
+## <a name="copyright"></a>Copyright
 Copyright (c) 2016 Microsoft. Tous droits réservés.
+
 

@@ -1,27 +1,27 @@
-# Biblioteca de Trechos de Código do SDK do Microsoft Graph para Xamarin.Forms
+# <a name="microsoft-graph-sdk-snippets-library-for-xamarin.forms"></a>Biblioteca de Trechos de Código do SDK do Microsoft Graph para Xamarin.Forms
 
-##Sumário
+##<a name="table-of-contents"></a>Sumário
 
-* [Pré-requisitos](#pré-requisitos)
-* [Registrar e configurar o aplicativo](#registrar-e-configurar-o-aplicativo)
-* [Compilar e depurar](#compilar-e-depurar)
-* [Executar o exemplo](#executar-o-exemplo)
-* [Como o exemplo afeta os dados da conta](#como-o-exemplo-afeta-os-dados-da-conta)
-* [Adicionar um trecho de código](#adicionar-um-trecho-de-código)
-* [Perguntas e comentários](#perguntas-e-comentários)
-* [Colaboração](#colaboração)
-* [Recursos adicionais](#recursos-adicionais)
+* [Pré-requisitos](#prerequisites)
+* [Registrar e configurar o aplicativo](#register)
+* [Compilar e depurar](#build)
+* [Executar o exemplo](#run)
+* [De que maneira o exemplo afeta os dados da conta](#how-the-sample-affects-your-tenant-data)
+* [Adicionar um trecho de código](#add-a-snippet)
+* [Perguntas e comentários](#questions)
+* [Colaboração](#contributing")
+* [Recursos adicionais](#additional-resources)
 
-<a name="introduction"></a> Este exemplo de projeto fornece um repositório de trechos de código que usa o Microsoft Graph para realizar tarefas comuns, como o envio de emails, gerenciamento de grupos e outras atividades diretamente de um aplicativo Xamarin.Forms. O exemplo usa o [SDK de Cliente do Microsoft Graph .NET](https://github.com/microsoftgraph/msgraph-sdk-dotnet) para trabalhar com dados retornados pelo Microsoft Graph. 
+<a name="introduction"></a> Este exemplo de projeto fornece um repositório de trechos de código que usa o Microsoft Graph para realizar tarefas comuns, como envio de emails, gerenciamento de grupos e outras atividades diretamente de um aplicativo Xamarin.Forms. O exemplo usa o [SDK do Cliente .NET para Microsoft Graph](https://github.com/microsoftgraph/msgraph-sdk-dotnet) para trabalhar com dados retornados pelo Microsoft Graph. 
 
-O exemplo usa a [Biblioteca de Autenticação da Microsoft (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) para autenticação. O SDK da MSAL fornece recursos para trabalhar com o [ponto de extremidade de autenticação v2](https://graph.microsoft.io/en-us/docs/authorization/converged_auth) que permite que os desenvolvedores gravem um único fluxo de código para tratar da autenticação de contas comerciais ou escolares (Azure Active Directory) e de contas pessoais (Microsoft) do usuário, incluindo contas do Office 365, Outlook.com e OneDrive.
+O exemplo usa a [Biblioteca de Autenticação da Microsoft (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) para autenticação. O SDK da MSAL fornece recursos para trabalhar com o [ponto de extremidade do Microsoft Azure AD versão 2.0](https://graph.microsoft.io/en-us/docs/authorization/converged_auth), que permite aos desenvolvedores gravar um único fluxo de código para tratar da autenticação de contas pessoais (Microsoft), corporativas ou de estudantes (Azure Active Directory), inclusive contas das plataformas Office 365, Outlook.com e OneDrive.
 
 > **Observação** No momento, o SDK da MSAL encontra-se em pré-lançamento e como tal não deve ser usado no código de produção. Isso é usado apenas para fins ilustrativos
 
 O aplicativo exibe uma interface de usuário que representa tarefas comuns do usuário ou “histórias”. Cada história é composta de um ou mais trechos de código. As histórias são agrupadas por tipo de conta e nível de permissão. O usuário pode fazer logon em sua conta e executar as histórias selecionadas. As histórias ficam verdes se tiverem êxito e vermelhas se falharem. Informações adicionais são enviadas para a janela de Saída.
 
 <a name="prerequisites"></a>
-## Pré-requisitos ##
+## <a name="prerequisites"></a>Pré-requisitos ##
 
 Este exemplo requer o seguinte:  
 
@@ -41,7 +41,7 @@ Se quiser executar o projeto do iOS neste exemplo, você precisará do seguinte:
 Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) se quiser executar o projeto do Android.
 
 <a name="register"></a>
-##Registrar e configurar o aplicativo
+##<a name="register-and-configure-the-app"></a>Registrar e configurar o aplicativo
 
 1. Entre no [Portal de Registro do Aplicativo](https://apps.dev.microsoft.com/) usando sua conta pessoal ou sua conta comercial ou escolar.
 2. Selecione **Adicionar um aplicativo**.
@@ -58,18 +58,18 @@ Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstu
 7. Selecione **Salvar**.
 
 <a name="build"></a>
-## Compilar e depurar ##
+## <a name="build-and-debug"></a>Compilar e depurar ##
 
 **Observação:** Caso receba mensagens de erro durante a instalação de pacotes na etapa 2, verifique se o caminho para o local onde você colocou a solução não é muito longo ou extenso. Para resolver esse problema, coloque a solução junto à raiz da unidade.
 
 1. Abra o arquivo App.cs no projeto **Graph_Xamarin_CS_Snippets (Portátil)** da solução.
 
-    ![Captura de tela do painel do Gerenciador de Soluções no Visual Studio, com o arquivo App.cs selecionado no projeto Graph_Xamarin_CS_Snippets](../readme-images/Appdotcs.png "Abrir o arquivo App.cs no projeto Graph_Xamarin_CS_Snippets")
+    ![Captura de tela do painel do Gerenciador de Soluções no Visual Studio, com o arquivo App.cs selecionado no projeto Graph_Xamarin_CS_Snippets](/readme-images/Appdotcs.png "Abrir o arquivo App.cs no projeto Graph_Xamarin_CS_Snippets")
 
 2. Após carregar a solução no Visual Studio, configure o exemplo para usar a ID do cliente registrada transformando-a no valor da variável **ClientId** variável no arquivo App.cs.
 
 
-    ![Captura de tela da variável ClientId no arquivo App.cs, atualmente definida como uma cadeia de caracteres vazia.](../readme-images/appId.png "Valor da ID do Cliente no arquivo App.cs")
+    ![Captura de tela da variável ClientId no arquivo App.cs, atualmente definida como uma cadeia de caracteres vazia.](/readme-images/appId.png "Valor da ID do Cliente no arquivo App.cs")
 
 2.  Se você estiver planejando entrar no exemplo com uma conta comercial ou escolar que não tenha permissões de administrador, será preciso comentar o código que solicita escopos que exigem permissões de administrador. Se não comentar essas linhas, você não será capaz de entrar com sua conta comercial ou escolar (se você entrar com uma conta pessoal, essas solicitações de escopo serão ignoradas.)
 
@@ -81,15 +81,15 @@ Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstu
         "https://graph.microsoft.com/Group.ReadWrite.All",
     ```
 
-3. Escolha o projeto que você deseja excluir. Se escolher a opção Plataforma Universal do Windows, você poderá executar o exemplo no computador local. Se quiser executar o projeto do iOS, você precisará se conectar a um [Mac que tenha as ferramentas Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) instaladas nele. (Você também pode abrir esta solução no Xamarin Studio em um Mac e executar o exemplo diretamente de lá). Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) se quiser executar o projeto do Android. 
+3. Escolha o projeto que você deseja excluir. Se escolher a opção Plataforma Universal do Windows, você poderá executar o exemplo no computador local. Se quiser executar o projeto do iOS, você precisará se conectar a um [Mac que tenha as ferramentas Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) instaladas nele. (Você também pode abrir esta solução no Xamarin Studio em um Mac e executar o exemplo diretamente de lá). Você pode usar o [Emulador do Microsoft Visual Studio para Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx), caso pretenda executar o projeto do Android. 
 
-    ![Captura de tela da barra de ferramentas do Visual Studio, com o iOS selecionado como o projeto de inicialização.](../readme-images/SelectProject.png "Selecionar o projeto no Visual Studio")
+    ![Captura de tela da barra de ferramentas do Visual Studio, com o iOS selecionado como o projeto de inicialização.](/readme-images/SelectProject.png "Selecionar o projeto no Visual Studio")
 
 4. Pressione F5 para criar e depurar. Execute a solução e entre com sua conta pessoal ou sua conta comercial ou escolar.
     > **Observação** Talvez seja necessário abrir o Gerenciador de Configuração de Compilação para certificar-se de que as etapas de Compilar e Implantar estejam selecionadas para o projeto do UWP.
 
 <a name="run"></a>
-## Executar o exemplo
+## <a name="run-the-sample"></a>Executar o exemplo
 
 Quando iniciado, o aplicativo exibe uma lista que representam tarefas comuns do usuário ou “histórias”. Cada história é composta de um ou mais trechos de código. As histórias são agrupadas por tipo de conta e nível de permissão:
 
@@ -102,14 +102,14 @@ Escolha as histórias que você deseja executar e escolha o botão “executar s
 As histórias ficam verdes se tiverem êxito e vermelhas se falharem. Informações adicionais são enviadas para a janela de Saída. 
 
 <a name="#how-the-sample-affects-your-tenant-data"></a>
-##Como o exemplo afeta os dados da conta
+##<a name="how-the-sample-affects-your-account-data"></a>Como o exemplo afeta os dados da conta
 
 Este exemplo executa comandos que criam, leem, atualizam ou excluem dados. Ele não editará ou excluirá os dados reais da conta. No entanto, o exemplo pode criar e deixar artefatos de dados em sua conta como parte da operação: durante a execução de comandos que criam, atualizam ou excluem, o exemplo cria entidades falsas, como novos usuários ou grupos, para não afetar os dados reais da conta. 
 
 O exemplo pode deixar tais entidades falsas em sua conta, se você escolher histórias que criam ou atualizam entidades. Por exemplo, ao escolher a história de execução ‘atualizar grupo’ cria um novo grupo e, em seguida, atualiza-o. Nesse caso, o novo grupo permanece na sua conta após o exemplo ser executado.
 
 <a name="add-a-snippet"></a>
-##Adicionar um trecho de código
+##<a name="add-a-snippet"></a>Adicionar um trecho de código
 
 Este projeto inclui dois arquivos de trechos de código: 
 
@@ -138,7 +138,7 @@ Se você tem seu próprio trecho de código e quer executá-lo neste projeto, ba
 
             }
 
-2. **Crie uma história que usa seu trecho de código e adicione-a ao arquivo de histórias associado.** Por exemplo, a história `TryGetMeAsync()` usa o trecho de código `GetMeAsync()` no arquivo Users\UserStories.cs:
+2. **Crie uma história que usa o trecho de código e adicione-a ao arquivo de histórias associado.** Por exemplo, a história `TryGetMeAsync()` usa o trecho de código `GetMeAsync()` no arquivo Users\UserStories.cs:
 
         public static async Task<bool> TryGetMeAsync()
         {
@@ -148,7 +148,7 @@ Se você tem seu próprio trecho de código e quer executá-lo neste projeto, ba
         }        
 
 
-Às vezes, sua história precisará executar trechos de código além daquele que você está implementando. Por exemplo, se você quiser atualizar um evento, primeiro é necessário usar o método `CreateEventAsync()` para criar um evento. Em seguida, você já poderá atualizá-lo. Sempre use trechos de código que já existam no arquivo de trechos de código. Se a operação que necessária não existir, você terá que criá-la e, em seguida, inclui-la em sua história. Excluir entidades criadas em uma história é uma prática recomendada, especialmente se você estiver trabalhando em uma conta que não seja uma conta de teste ou de desenvolvedor.
+Às vezes, sua história precisará executar trechos de código além do que você está implementando. Por exemplo, se você quiser atualizar um evento, primeiro é necessário usar o método `CreateEventAsync()` para criar um evento. Em seguida, você já poderá atualizá-lo. Sempre use trechos de código que já existam no arquivo de trechos de código. Se a operação que necessária não existir, você terá que criá-la e, em seguida, inclui-la em sua história. Excluir entidades criadas em uma história é uma prática recomendada, especialmente se você estiver trabalhando em uma conta que não seja uma conta de teste ou de desenvolvedor.
 
 3. **Adicione sua história à lista de histórias em MainPage.xaml.cs** (no método `CreateStoryList()`):
     
@@ -158,14 +158,14 @@ Se você tem seu próprio trecho de código e quer executá-lo neste projeto, ba
 Você já pode testar seu trecho de código. Ao executar o aplicativo, sua história aparecerá como um novo item. Escolha a caixa de seleção do trecho de código e execute-o. Use isso como uma oportunidade para depurar seu trecho de código.
 
 <a name="questions"></a>
-## Perguntas e comentários
+## <a name="questions-and-comments"></a>Perguntas e comentários
 
 Adoraríamos receber seus comentários sobre o Exemplo de Trechos de Código do Microsoft Graph para o projeto Xamarin.Forms. Você pode nos enviar suas perguntas e sugestões por meio da seção [Issues](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues) deste repositório.
 
 Seus comentários são importantes para nós. Junte-se a nós na página [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph). Marque suas perguntas com [MicrosoftGraph].
 
 <a name="contributing"></a>
-## Colaboração ##
+## <a name="contributing"></a>Colaboração ##
 
 Se quiser contribuir para esse exemplo, confira [CONTRIBUTING.MD](/CONTRIBUTING.md).
 
@@ -173,14 +173,15 @@ Este projeto adotou o [Código de Conduta do Código Aberto da Microsoft](https:
 
 
 <a name="additional-resources"></a>
-## Recursos adicionais ##
+## <a name="additional-resources"></a>Recursos adicionais ##
 
 - [Outros exemplos de conexão usando o Microsoft Graph](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
 - [Visão geral do Microsoft Graph](http://graph.microsoft.io)
 - [Exemplos de código para desenvolvedores do Office](http://dev.office.com/code-samples)
-- [Centro de desenvolvimento do Office](http://dev.office.com/)
+- [Centro de Desenvolvimento do Office](http://dev.office.com/)
 
 
-## Direitos autorais
+## <a name="copyright"></a>Direitos autorais
 Copyright © 2016 Microsoft. Todos os direitos reservados.
+
 
