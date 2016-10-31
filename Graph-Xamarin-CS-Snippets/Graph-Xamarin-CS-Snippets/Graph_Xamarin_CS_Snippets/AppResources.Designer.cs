@@ -62,6 +62,15 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add member to group.
+        /// </summary>
+        internal static string AddMember {
+            get {
+                return ResourceManager.GetString("AddMember", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Microsoft Graph Snippets.
         /// </summary>
         internal static string AppTitle {

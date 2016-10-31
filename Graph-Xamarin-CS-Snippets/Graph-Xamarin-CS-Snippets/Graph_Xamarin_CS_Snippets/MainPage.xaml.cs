@@ -94,6 +94,8 @@ namespace Graph_Xamarin_CS_Snippets
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.CreateGroup, GroupName = "Groups", AccountType = "WorkAdmin", RunStoryAsync = GroupStories.TryCreateGroupAsync });
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.UpdateGroup, GroupName = "Groups", AccountType = "WorkAdmin", RunStoryAsync = GroupStories.TryUpdateGroupAsync });
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.DeleteGroup, GroupName = "Groups", AccountType = "WorkAdmin", RunStoryAsync = GroupStories.TryDeleteGroupAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.AddMember, GroupName = "Groups", AccountType = "WorkAdmin", RunStoryAsync = GroupStories.TryAddUserToGroup });
+
 
         }
 

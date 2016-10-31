@@ -81,7 +81,7 @@ namespace Graph_Xamarin_CS_Snippets
 
         public static async Task<string> CreateUserAsync(string userName)
         {
-            string createdUserName = null;
+            string createdUserId = null;
 
 
 
@@ -107,8 +107,8 @@ namespace Graph_Xamarin_CS_Snippets
 
                 });
 
-                createdUserName = user.DisplayName;
-                Debug.WriteLine("Created user: " + createdUserName);
+                createdUserId = user.Id;
+                Debug.WriteLine("Created user: " + createdUserId);
 
             }
 
@@ -118,7 +118,7 @@ namespace Graph_Xamarin_CS_Snippets
                 return null;
             }
 
-            return createdUserName;
+            return createdUserId;
 
         }
 

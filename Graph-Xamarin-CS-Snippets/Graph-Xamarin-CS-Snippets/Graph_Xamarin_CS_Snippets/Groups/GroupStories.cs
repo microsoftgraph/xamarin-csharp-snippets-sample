@@ -100,6 +100,16 @@ namespace Graph_Xamarin_CS_Snippets
             return await GroupSnippets.DeleteGroupAsync(createdGroup);
         }
 
+        public static async Task<bool> TryAddUserToGroup()
+        {
+            //Create a group
+            string createdGroup = await GroupSnippets.CreateGroupAsync(STORY_DATA_IDENTIFIER);
+            //Create a user
+            string createdUser = await UserSnippets.CreateUserAsync(STORY_DATA_IDENTIFIER);
+            //Add the user to the group
+            return await GroupSnippets.AddUserToGroup(createdUser, createdGroup);
+        }
+
     }
 }
 
