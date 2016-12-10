@@ -71,11 +71,38 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add XL Table.
+        /// </summary>
+        internal static string AddXLTable {
+            get {
+                return ResourceManager.GetString("AddXLTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add XL Table Row.
+        /// </summary>
+        internal static string AddXLTableRow {
+            get {
+                return ResourceManager.GetString("AddXLTableRow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Microsoft Graph Snippets.
         /// </summary>
         internal static string AppTitle {
             get {
                 return ResourceManager.GetString("AppTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change XL Number Format.
+        /// </summary>
+        internal static string ChangeXLNumFormat {
+            get {
+                return ResourceManager.GetString("ChangeXLNumFormat", resourceCulture);
             }
         }
         
@@ -134,6 +161,15 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create XL Chart.
+        /// </summary>
+        internal static string CreateXLChart {
+            get {
+                return ResourceManager.GetString("CreateXLChart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Event.
         /// </summary>
         internal static string DeleteEvent {
@@ -161,6 +197,15 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete XL File.
+        /// </summary>
+        internal static string DeleteXLFile {
+            get {
+                return ResourceManager.GetString("DeleteXLFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to disconnect.
         /// </summary>
         internal static string Disconnect {
@@ -175,6 +220,15 @@ namespace Graph_Xamarin_CS_Snippets {
         internal static string DownloadFile {
             get {
                 return ResourceManager.GetString("DownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter XL Table.
+        /// </summary>
+        internal static string FilterXLTable {
+            get {
+                return ResourceManager.GetString("FilterXLTable", resourceCulture);
             }
         }
         
@@ -296,6 +350,15 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Get XL Range.
+        /// </summary>
+        internal static string GetXLRange {
+            get {
+                return ResourceManager.GetString("GetXLRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Applicable to personal or work accounts.
         /// </summary>
         internal static string PersonalWorkAccess {
@@ -310,6 +373,15 @@ namespace Graph_Xamarin_CS_Snippets {
         internal static string PleaseRegister {
             get {
                 return ResourceManager.GetString("PleaseRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Protect Worksheet.
+        /// </summary>
+        internal static string ProtectWorksheet {
+            get {
+                return ResourceManager.GetString("ProtectWorksheet", resourceCulture);
             }
         }
         
@@ -368,6 +440,33 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set XL Formula.
+        /// </summary>
+        internal static string SetXLFormula {
+            get {
+                return ResourceManager.GetString("SetXLFormula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort XL Table.
+        /// </summary>
+        internal static string SortXLTable {
+            get {
+                return ResourceManager.GetString("SortXLTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unprotect Worksheet.
+        /// </summary>
+        internal static string UnprotectWorksheet {
+            get {
+                return ResourceManager.GetString("UnprotectWorksheet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update Event.
         /// </summary>
         internal static string UpdateEvent {
@@ -395,6 +494,24 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update XL Range.
+        /// </summary>
+        internal static string UpdateXLRange {
+            get {
+                return ResourceManager.GetString("UpdateXLRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload XL File.
+        /// </summary>
+        internal static string UploadXLFile {
+            get {
+                return ResourceManager.GetString("UploadXLFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Applicable to work accounts only.
         /// </summary>
         internal static string WorkAccess {
@@ -409,6 +526,15 @@ namespace Graph_Xamarin_CS_Snippets {
         internal static string WorkAdminAccess {
             get {
                 return ResourceManager.GetString("WorkAdminAccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to XL ABS Function.
+        /// </summary>
+        internal static string XLABSFunction {
+            get {
+                return ResourceManager.GetString("XLABSFunction", resourceCulture);
             }
         }
     }

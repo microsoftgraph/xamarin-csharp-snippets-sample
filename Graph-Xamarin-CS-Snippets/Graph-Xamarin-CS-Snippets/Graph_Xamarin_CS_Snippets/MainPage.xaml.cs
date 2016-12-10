@@ -97,6 +97,30 @@ namespace Graph_Xamarin_CS_Snippets
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.AddMember, GroupName = "Groups", AccountType = "WorkAdmin", RunStoryAsync = GroupStories.TryAddUserToGroup });
 
 
+            // Excel snippets. These stories are applicable only to work or school accounts.
+            // NOTE: All of these snippets will fail for lack of permissions if you sign into the sample with a personal (consumer) account
+
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.UploadXLFile, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryUploadExcelFileAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.CreateXLChart, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryCreateExcelChartFromTableAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetXLRange, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryGetExcelRangeAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.UpdateXLRange, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryUpdateExcelRangeAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.ChangeXLNumFormat, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryChangeExcelNumberFormatAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.XLABSFunction, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryAbsExcelFunctionAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.SetXLFormula, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TrySetExcelFormulaAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.AddXLTable, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryAddExcelTableToUsedRangeAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.AddXLTableRow, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryAddExcelRowToTableAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.SortXLTable, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TrySortExcelTableOnFirstColumnValueAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.FilterXLTable, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryFilterExcelTableValuesAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.ProtectWorksheet, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryProtectExcelWorksheetAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.UnprotectWorksheet, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryUnprotectExcelWorksheetAsync });
+
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.DeleteXLFile, GroupName = "Users", AccountType = "WorkAdmin", RunStoryAsync = UserStories.TryDeleteExcelFileAsync });
+            
+
+
+
+
+
         }
 
         async void RunSelectedStories_Click(object sender, EventArgs args)
