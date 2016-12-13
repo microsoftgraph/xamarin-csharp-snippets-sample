@@ -120,8 +120,17 @@
   <data name="AddMember" xml:space="preserve">
     <value>Add member to group</value>
   </data>
+  <data name="AddXLTable" xml:space="preserve">
+    <value>Add XL Table</value>
+  </data>
+  <data name="AddXLTableRow" xml:space="preserve">
+    <value>Add XL Table Row</value>
+  </data>
   <data name="AppTitle" xml:space="preserve">
     <value>Microsoft Graph Snippets</value>
+  </data>
+  <data name="ChangeXLNumFormat" xml:space="preserve">
+    <value>Change XL Number Format</value>
   </data>
   <data name="ClearSelected" xml:space="preserve">
     <value>clear selection</value>
@@ -141,6 +150,9 @@
   <data name="CreateUser" xml:space="preserve">
     <value>Create User</value>
   </data>
+  <data name="CreateXLChart" xml:space="preserve">
+    <value>Create XL Chart</value>
+  </data>
   <data name="DeleteEvent" xml:space="preserve">
     <value>Delete Event</value>
   </data>
@@ -150,11 +162,17 @@
   <data name="DeleteGroup" xml:space="preserve">
     <value>Delete Group</value>
   </data>
+  <data name="DeleteXLFile" xml:space="preserve">
+    <value>Delete XL File</value>
+  </data>
   <data name="Disconnect" xml:space="preserve">
     <value>disconnect</value>
   </data>
   <data name="DownloadFile" xml:space="preserve">
     <value>Download File</value>
+  </data>
+  <data name="FilterXLTable" xml:space="preserve">
+    <value>Filter XL Table</value>
   </data>
   <data name="GetAGroup" xml:space="preserve">
     <value>Get a Group</value>
@@ -195,11 +213,17 @@
   <data name="GetUserGroups" xml:space="preserve">
     <value>Get User Groups</value>
   </data>
+  <data name="GetXLRange" xml:space="preserve">
+    <value>Get XL Range</value>
+  </data>
   <data name="PersonalWorkAccess" xml:space="preserve">
     <value>Applicable to personal or work accounts</value>
   </data>
   <data name="PleaseRegister" xml:space="preserve">
     <value>Please register your app before you run this sample</value>
+  </data>
+  <data name="ProtectWorksheet" xml:space="preserve">
+    <value>Protect Worksheet</value>
   </data>
   <data name="ReadUsers" xml:space="preserve">
     <value>Read Users</value>
@@ -219,6 +243,15 @@
   <data name="SendMessage" xml:space="preserve">
     <value>Send Message</value>
   </data>
+  <data name="SetXLFormula" xml:space="preserve">
+    <value>Set XL Formula</value>
+  </data>
+  <data name="SortXLTable" xml:space="preserve">
+    <value>Sort XL Table</value>
+  </data>
+  <data name="UnprotectWorksheet" xml:space="preserve">
+    <value>Unprotect Worksheet</value>
+  </data>
   <data name="UpdateEvent" xml:space="preserve">
     <value>Update Event</value>
   </data>
@@ -228,10 +261,19 @@
   <data name="UpdateGroup" xml:space="preserve">
     <value>Update Group</value>
   </data>
+  <data name="UpdateXLRange" xml:space="preserve">
+    <value>Update XL Range</value>
+  </data>
+  <data name="UploadXLFile" xml:space="preserve">
+    <value>Upload XL File</value>
+  </data>
   <data name="WorkAccess" xml:space="preserve">
     <value>Applicable to work accounts only</value>
   </data>
   <data name="WorkAdminAccess" xml:space="preserve">
     <value>Applicable to work accounts with admin rights</value>
+  </data>
+  <data name="XLABSFunction" xml:space="preserve">
+    <value>XL ABS Function</value>
   </data>
 </root>
