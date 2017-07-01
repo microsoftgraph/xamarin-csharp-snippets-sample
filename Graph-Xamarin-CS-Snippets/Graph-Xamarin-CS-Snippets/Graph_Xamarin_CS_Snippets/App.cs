@@ -14,7 +14,9 @@ namespace Graph_Xamarin_CS_Snippets
     public class App : Application
     {
         public static PublicClientApplication IdentityClientApp = null;
-        public static string ClientID = "";
+        public static string ClientID = "ENTER_YOUR_CLIENT_ID";
+        public static string RedirectUri = "msal" + ClientID + "://auth";
+        public static UIParent UiParent = null;
         public static string[] Scopes = {
                         "https://graph.microsoft.com/User.Read",
                         "https://graph.microsoft.com/User.ReadWrite",

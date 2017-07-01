@@ -22,7 +22,6 @@ namespace Graph_Xamarin_CS_Snippets.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            page.platformParameters = new PlatformParameters(this);
         }
     }
 }
