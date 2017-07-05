@@ -58,9 +58,9 @@ namespace Graph_Xamarin_CS_Snippets
         {
             if (TokenForUser == null || expiration <= DateTimeOffset.UtcNow.AddMinutes(5))
             {
-                AuthenticationResult authResult = await App.IdentityClientApp.AcquireTokenAsync(App.Scopes);
+                AuthenticationResult authResult = await App.IdentityClientApp.AcquireTokenAsync(App.Scopes, App.UiParent);
 
-                TokenForUser = authResult.Token;
+                TokenForUser = authResult.AccessToken;
                 expiration = authResult.ExpiresOn;
             }
 
@@ -75,7 +75,7 @@ namespace Graph_Xamarin_CS_Snippets
         {
             foreach (var user in App.IdentityClientApp.Users)
             {
-                user.SignOut();
+                App.IdentityClientApp.Remove(user);
             }
             graphClient = null;
             TokenForUser = null;

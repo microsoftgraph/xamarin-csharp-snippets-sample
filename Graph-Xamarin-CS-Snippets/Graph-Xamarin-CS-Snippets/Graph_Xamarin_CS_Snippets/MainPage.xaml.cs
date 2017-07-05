@@ -20,7 +20,6 @@ namespace Graph_Xamarin_CS_Snippets
     public partial class MainPage : ContentPage
     {
 
-        public IPlatformParameters platformParameters { get; set; }
         private static GraphServiceClient graphClient = null;
         public MainPage()
         {
@@ -35,7 +34,6 @@ namespace Graph_Xamarin_CS_Snippets
 
         protected override void OnAppearing()
         {
-            App.IdentityClientApp.PlatformParameters = platformParameters;
             
             // Developer code - if you haven't registered the app yet, we warn you. 
             if (App.ClientID == "")

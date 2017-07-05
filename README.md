@@ -1,6 +1,6 @@
-﻿# Microsoft Graph SDK Snippets Library for Xamarin.Forms
+# Microsoft Graph SDK Snippets Library for Xamarin.Forms
 
-##Table of contents
+## Table of contents
 
 * [Prerequisites](#prerequisites)
 * [Register and configure the app](#register)
@@ -17,7 +17,9 @@ This sample project provides a repository of code snippets that use the Microsof
 
 The sample uses the [Microsoft Authentication Library (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) for authentication. The MSAL SDK provides features for working with the [Azure AD v2.0 endpoint](https://graph.microsoft.io/en-us/docs/authorization/converged_auth), which enables developers to write a single code flow that handles authentication for both users' work or school (Azure Active Directory) or personal (Microsoft) accounts, including Office 365, Outlook.com, and OneDrive accounts.
 
-> **Note** The MSAL SDK is currently in prerelease, and as such should not be used in production code. It is used here for illustrative purposes only.
+## Important Note about the MSAL Preview
+
+This library is suitable for use in a production environment. We provide the same production level support for this library as we do our current production libraries. During the preview we may make changes to the API, internal cache format, and other mechanisms of this library, which you will be required to take along with bug fixes or feature improvements. This may impact your application. For instance, a change to the cache format may impact your users, such as requiring them to sign in again. An API change may require you to update your code. When we provide the General Availability release we will require you to update to the General Availability version within six months, as applications written using a preview version of library may no longer work.
 
 The app displays UI representing common user tasks, or 'stories'. Each story is comprised of one or more code snippets. The stories are grouped by the account type and permission level. The user can log into their account and run the selected stories. Each story turns green if it succeeds, and red if it fails. Additional information is sent to the Output window.
 
@@ -42,7 +44,7 @@ If you want to run the iOS project in this sample, you'll need the following:
 You can use the [Visual Studio Emulator for Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) if you want to run the Android project.
 
 <a name="register"></a>
-##Register and configure the app
+## Register and configure the app
 
 1. Sign into the [App Registration Portal](https://apps.dev.microsoft.com/) using either your personal or work or school account.
 2. Select **Add an app**.
@@ -110,7 +112,7 @@ This sample runs commands that create, read, update, or delete data. It will not
 The sample may leave behind such fake entities in your account, if you choose stories that create or update entities. For example, choosing the run the 'update group' story creates a new group, then updates it. In this case, the new group remains in your account after the sample has run.
 
 <a name="add-a-snippet"></a>
-##Add a snippet
+## Add a snippet
 
 This project includes two snippets files: 
 
@@ -183,6 +185,6 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 
 ## Copyright
-Copyright (c) 2016 Microsoft. All rights reserved.
+Copyright (c) 2017 Microsoft. All rights reserved.
 
 
