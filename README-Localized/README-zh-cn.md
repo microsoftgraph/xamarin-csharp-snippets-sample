@@ -1,6 +1,8 @@
-# <a name="microsoft-graph-sdk-snippets-library-for-xamarin.forms"></a>Xamarin.Forms 的 Microsoft Graph SDK 代码段库
+# Xamarin.Forms 的 Microsoft Graph SDK 代码段库
+<a id="microsoft-graph-sdk-snippets-library-for-xamarinforms" class="xliff"></a>
 
-##<a name="table-of-contents"></a>目录
+## 目录
+<a id="table-of-contents" class="xliff"></a>
 
 * [先决条件](#prerequisites)
 * [注册和配置应用](#register)
@@ -16,12 +18,16 @@
 
 此示例使用 [Microsoft 身份验证库 (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) 进行身份验证。MSAL SDK 提供使用 [Azure AD v2.0 终结点](https://graph.microsoft.io/en-us/docs/authorization/converged_auth)的功能以使开发人员写入单个代码流，用于对用户的工作或学校 (Azure Active Directory) 或个人 (Microsoft) 帐户（包括 Office 365、Outlook.com 和 OneDrive 帐户）进行身份验证。
 
-> **注意** MSAL SDK 目前处于预发布状态，因此，不应该在生产代码中使用。在此处仅用于说明目的。
+## 有关 MSAL 预览版的重要说明
+<a id="important-note-about-the-msal-preview" class="xliff"></a>
+
+此库适用于生产环境。 我们为此库提供的生产级支持与为当前生产库提供的支持相同。 在预览期间，我们可能会更改 API、内部缓存格式和此库的其他机制，必须接受这些更改以及 bug 修复或功能改进。 这可能会影响应用。 例如，缓存格式更改可能会对用户造成影响，如要求用户重新登录。 API 更改可能会要求更新代码。 在我们提供通用版后，必须在 6 个月内更新到通用版，因为使用预览版库编写的应用可能不再可用。
 
 该应用显示表示常见用户任务或情景的 UI。每个情景由一个或多个代码段组成。情景按帐户类型和权限级别进行分组。用户可以登录到自己的帐户并运行所选情景。每个情景在运行成功时变为绿色，在运行失败时变为红色。其他信息被发送至输出窗口。
 
 <a name="prerequisites"></a>
-## <a name="prerequisites"></a>先决条件 ##
+## 先决条件
+<a id="prerequisites" class="xliff"></a> ##
 
 此示例需要以下各项：  
 
@@ -41,7 +47,8 @@
 如果想要运行 Android 项目，可以使用 [适用于 Android 的 Visual Studio 模拟器](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx)。
 
 <a name="register"></a>
-##<a name="register-and-configure-the-app"></a>注册和配置应用
+## 注册和配置应用
+<a id="register-and-configure-the-app" class="xliff"></a>
 
 1. 使用个人或工作或学校帐户登录到 [应用注册门户](https://apps.dev.microsoft.com/)。
 2. 选择“**添加应用**”。
@@ -58,11 +65,12 @@
 7. 选择“**保存**”。
 
 <a name="build"></a>
-## <a name="build-and-debug"></a>构建和调试 ##
+## 生成和调试
+<a id="build-and-debug" class="xliff"></a> ##
 
 **注意：**如果在步骤 2 安装程序包时出现任何错误，请确保放置该解决方案的本地路径并未太长/太深。将解决方案移动到更接近驱动器根目录的位置可以解决此问题。
 
-1. 打开解决方案的 **Graph_Xamarin_CS_Snippets（可移植）**项目内的 App.cs 文件。
+1. 打开解决方案的“Graph_Xamarin_CS_Snippets (可移植)”****项目内的 App.cs 文件。
 
     ![Visual Studio 中的解决方案资源管理器窗格的屏幕截图（在 Graph_Xamarin_CS_Snippets 项目中选择了 App.cs 文件）](/readme-images/Appdotcs.png "在 Graph_Xamarin_CS_Snippets 项目中打开 App.cs 文件")
 
@@ -73,7 +81,7 @@
 
 2.  如果计划使用没有管理员权限的工作或学校帐户登录到示例，则需剔除所需的作用域（要求管理员权限）的代码。如果未剔除这些行，则不能使用你的工作或学校帐户登录（如果使用个人帐户登录，则这些作用域请求将被忽略。）
 
-    在 `AuthenticationHelper.cs` 文件的 `GetTokenForUserAsync()` 方法中剔除以下作用域请求：
+    在 `AuthenticationHelper.cs` 文件的 `GetTokenForUserAsync()` 方法中，注释掉以下作用域请求：
     
     ```
         "https://graph.microsoft.com/Directory.AccessAsUser.All",
@@ -83,13 +91,14 @@
 
 3. 选择想要运行的项目。如果选择“通用 Windows 平台”选项，则可以在本地计算机上运行示例。如果想要运行 iOS 项目，则需连接到安装在其上的 [具有 Xamarin 工具的 Mac](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/)。（还可以在 Mac 上的 Xamarin Studio 中打开此解决方案并直接从此处运行示例。）如果想要运行 Android 项目，可以使用[适用于 Android 的 Visual Studio 模拟器](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx)。 
 
-    ![Visual Studio 工具栏的屏幕截图（iOS 被选为启动项目）。](/readme-images/SelectProject.png "选择 Visual Studio 中的项目")
+    ![Visual Studio 工具栏的屏幕截图（iOS 被选为启动项目）。](/readme-images/SelectProject.png "在 Visual Studio 中选择项目")
 
 4. 按 F5 进行构建和调试。运行此解决方案并使用个人或工作或学校帐户登录。
     > **注意** 可能需要打开生成配置管理器，以确保为 UWP 项目选择“生成”和“部署”步骤。
 
 <a name="run"></a>
-## <a name="run-the-sample"></a>运行示例
+## 运行示例
+<a id="run-the-sample" class="xliff"></a>
 
 启动时，应用将显示表示常见用户任务或情景的列表。每个情景由一个或多个代码段组成。情景按帐户类型和权限级别进行分组：
 
@@ -102,14 +111,16 @@
 每个情景在运行成功时变为绿色，在运行失败时变为红色。其他信息被发送至输出窗口。 
 
 <a name="#how-the-sample-affects-your-tenant-data"></a>
-##<a name="how-the-sample-affects-your-account-data"></a>示例如何影响你的帐户数据
+##示例如何影响你的帐户数据
+<a id="how-the-sample-affects-your-account-data" class="xliff"></a>
 
 此示例运行创建、读取、更新或删除数据的命令。它不会编辑或删除你的实际帐户数据。但是，它可能会创建数据项目并将其作为操作的一部分保留在你的帐户中：当运行创建、更新或删除命令时，示例将创建虚设实体，如新用户或组，以免影响你的实际帐户数据。 
 
 如果你选择创建或更新实体的情景，则示例可能将该虚设实体遗留在你的帐户中。例如，选择运行“更新组”情景将创建新组，然后对其更新。在这种情况下，示例已运行后，新组仍保留在你的帐户中。
 
 <a name="add-a-snippet"></a>
-##<a name="add-a-snippet"></a>添加代码段
+## 添加代码段
+<a id="add-a-snippet" class="xliff"></a>
 
 该项目包括两个代码段文件： 
 
@@ -118,7 +129,7 @@
 
 如果想要在该项目中运行自己的代码段，只需执行以下三个步骤：
 
-1. **将代码段添加到代码段文件。**请务必包括 try/catch 块。 
+1. **将代码段添加到代码段文件。**请务必添加 try/catch 块。 
 
         public static async Task<string> GetMeAsync()
         {
@@ -150,7 +161,7 @@
 
 有时，情景需要运行正在实现的代码段以外的代码段。例如，如果想要更新某个事件，首先需要使用 `CreateEventAsync()` 方法来创建一个事件。然后可以对其更新。始终确保使用总是存在于代码段文件中的代码段。如果所需的操作不存在，则需对其创建并将其包括在你的情景中。最好的做法是删除在情境中创建的任何实体，尤其是当你仅进行测试或使用开发人员帐户时。
 
-3. **将你的情景添加到 MainPage.xaml.cs 中的情景列表**（在 `CreateStoryList()` 方法内）：
+3. **将情景添加到 MainPage.xaml.cs 中的情景列表**（在 `CreateStoryList()` 方法内）：
     
     `snippetList.Children.Add(new CheckBox 
         { StoryName = "Get Me", GroupName = "Users", AccountType = "All", RunStoryAsync = UserStories.TryGetMeAsync });`
@@ -158,14 +169,16 @@
 现在可以测试你的代码段。运行应用时，你的情景将作为新项目出现。为你的代码段选择复选框，然后运行它。将其作为调试你的代码段的机会。
 
 <a name="questions"></a>
-## <a name="questions-and-comments"></a>问题和意见
+## 问题和意见
+<a id="questions-and-comments" class="xliff"></a>
 
 我们乐意倾听你有关 Xamarin.Forms 的 Microsoft Graph 代码段示例项目的反馈。你可以在该存储库中的 [问题](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues) 部分将问题和建议发送给我们。
 
-你的反馈对我们意义重大。请在 [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph) 上与我们联系。使用 [MicrosoftGraph] 标记出你的问题。
+我们非常重视你的反馈。请在 [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph) 上与我们联系。使用 [MicrosoftGraph] 标记出你的问题。
 
 <a name="contributing"></a>
-## <a name="contributing"></a>参与 ##
+## 参与
+<a id="contributing" class="xliff"></a> ##
 
 如果想要参与本示例，请参阅 [CONTRIBUTING.MD](/CONTRIBUTING.md)。
 
@@ -173,7 +186,8 @@
 
 
 <a name="additional-resources"></a>
-## <a name="additional-resources"></a>其他资源 ##
+## 其他资源
+<a id="additional-resources" class="xliff"></a> ##
 
 - [其他 Microsoft Graph Connect 示例](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
 - [Microsoft Graph 概述](http://graph.microsoft.io)
@@ -181,7 +195,8 @@
 - [Office 开发人员中心](http://dev.office.com/)
 
 
-## <a name="copyright"></a>版权
-版权所有 (c) 2016 Microsoft。保留所有权利。
+## 版权
+<a id="copyright" class="xliff"></a>
+版权所有 (c) 2017 Microsoft。保留所有权利。
 
 

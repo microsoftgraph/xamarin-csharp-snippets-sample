@@ -1,6 +1,8 @@
-# <a name="microsoft-graph-sdk-snippets-library-for-xamarin.forms"></a>Biblioteca de Trechos de Código do SDK do Microsoft Graph para Xamarin.Forms
+# Biblioteca de Trechos de Código do SDK do Microsoft Graph para Xamarin.Forms
+<a id="microsoft-graph-sdk-snippets-library-for-xamarinforms" class="xliff"></a>
 
-##<a name="table-of-contents"></a>Sumário
+## Sumário
+<a id="table-of-contents" class="xliff"></a>
 
 * [Pré-requisitos](#prerequisites)
 * [Registrar e configurar o aplicativo](#register)
@@ -16,12 +18,16 @@
 
 O exemplo usa a [Biblioteca de Autenticação da Microsoft (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) para autenticação. O SDK da MSAL fornece recursos para trabalhar com o [ponto de extremidade do Microsoft Azure AD versão 2.0](https://graph.microsoft.io/en-us/docs/authorization/converged_auth), que permite aos desenvolvedores gravar um único fluxo de código para tratar da autenticação de contas pessoais (Microsoft), corporativas ou de estudantes (Azure Active Directory), inclusive contas das plataformas Office 365, Outlook.com e OneDrive.
 
-> **Observação** No momento, o SDK da MSAL encontra-se em pré-lançamento e como tal não deve ser usado no código de produção. Isso é usado apenas para fins ilustrativos
+## Observação importante sobre a Visualização da MSAL
+<a id="important-note-about-the-msal-preview" class="xliff"></a>
+
+Esta biblioteca é adequada para uso em um ambiente de produção. Ela recebe o mesmo suporte de nível de produção que fornecemos às nossas bibliotecas de produção atuais. Durante a visualização, podemos fazer alterações na API, no formato de cache interno e em outros mecanismos desta biblioteca, que você será solicitado a implementar juntamente com correções de bugs ou melhorias de recursos. Isso pode impactar seu aplicativo. Por exemplo, uma alteração no formato de cache pode impactar seus usuários, exigindo que eles entrem novamente. Uma alteração na API pode requerer que você atualize seu código. Quando fornecermos a versão de Disponibilidade Geral, você será solicitado a atualizar a versão de Disponibilidade Geral no prazo de seis meses, pois os aplicativos escritos usando uma versão de visualização da biblioteca podem não funcionar mais.
 
 O aplicativo exibe uma interface de usuário que representa tarefas comuns do usuário ou “histórias”. Cada história é composta de um ou mais trechos de código. As histórias são agrupadas por tipo de conta e nível de permissão. O usuário pode fazer logon em sua conta e executar as histórias selecionadas. As histórias ficam verdes se tiverem êxito e vermelhas se falharem. Informações adicionais são enviadas para a janela de Saída.
 
 <a name="prerequisites"></a>
-## <a name="prerequisites"></a>Pré-requisitos ##
+## Pré-requisitos
+<a id="prerequisites" class="xliff"></a> ##
 
 Este exemplo requer o seguinte:  
 
@@ -41,7 +47,8 @@ Se quiser executar o projeto do iOS neste exemplo, você precisará do seguinte:
 Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) se quiser executar o projeto do Android.
 
 <a name="register"></a>
-##<a name="register-and-configure-the-app"></a>Registrar e configurar o aplicativo
+## Registrar e configurar o aplicativo
+<a id="register-and-configure-the-app" class="xliff"></a>
 
 1. Entre no [Portal de Registro do Aplicativo](https://apps.dev.microsoft.com/) usando sua conta pessoal ou sua conta comercial ou escolar.
 2. Selecione **Adicionar um aplicativo**.
@@ -58,7 +65,8 @@ Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstu
 7. Selecione **Salvar**.
 
 <a name="build"></a>
-## <a name="build-and-debug"></a>Compilar e depurar ##
+## Compilar e depurar
+<a id="build-and-debug" class="xliff"></a> ##
 
 **Observação:** Caso receba mensagens de erro durante a instalação de pacotes na etapa 2, verifique se o caminho para o local onde você colocou a solução não é muito longo ou extenso. Para resolver esse problema, coloque a solução junto à raiz da unidade.
 
@@ -81,7 +89,7 @@ Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstu
         "https://graph.microsoft.com/Group.ReadWrite.All",
     ```
 
-3. Escolha o projeto que você deseja excluir. Se escolher a opção Plataforma Universal do Windows, você poderá executar o exemplo no computador local. Se quiser executar o projeto do iOS, você precisará se conectar a um [Mac que tenha as ferramentas Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) instaladas nele. (Você também pode abrir esta solução no Xamarin Studio em um Mac e executar o exemplo diretamente de lá). Você pode usar o [Emulador do Microsoft Visual Studio para Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx), caso pretenda executar o projeto do Android. 
+3. Escolha o projeto que você deseja excluir. Se escolher a opção Plataforma Universal do Windows, você poderá executar o exemplo no computador local. Se quiser executar o projeto do iOS, você precisará se conectar a um [Mac que tenha as ferramentas Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) instaladas nele. (Você também pode abrir esta solução no Xamarin Studio em um Mac e executar o exemplo diretamente de lá). Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) se quiser executar o projeto do Android. 
 
     ![Captura de tela da barra de ferramentas do Visual Studio, com o iOS selecionado como o projeto de inicialização.](/readme-images/SelectProject.png "Selecionar o projeto no Visual Studio")
 
@@ -89,7 +97,8 @@ Você pode usar o [Emulador do Visual Studio para Android](https://www.visualstu
     > **Observação** Talvez seja necessário abrir o Gerenciador de Configuração de Compilação para certificar-se de que as etapas de Compilar e Implantar estejam selecionadas para o projeto do UWP.
 
 <a name="run"></a>
-## <a name="run-the-sample"></a>Executar o exemplo
+## Executar o exemplo
+<a id="run-the-sample" class="xliff"></a>
 
 Quando iniciado, o aplicativo exibe uma lista que representam tarefas comuns do usuário ou “histórias”. Cada história é composta de um ou mais trechos de código. As histórias são agrupadas por tipo de conta e nível de permissão:
 
@@ -102,14 +111,16 @@ Escolha as histórias que você deseja executar e escolha o botão “executar s
 As histórias ficam verdes se tiverem êxito e vermelhas se falharem. Informações adicionais são enviadas para a janela de Saída. 
 
 <a name="#how-the-sample-affects-your-tenant-data"></a>
-##<a name="how-the-sample-affects-your-account-data"></a>Como o exemplo afeta os dados da conta
+##Como o exemplo afeta os dados da conta
+<a id="how-the-sample-affects-your-account-data" class="xliff"></a>
 
 Este exemplo executa comandos que criam, leem, atualizam ou excluem dados. Ele não editará ou excluirá os dados reais da conta. No entanto, o exemplo pode criar e deixar artefatos de dados em sua conta como parte da operação: durante a execução de comandos que criam, atualizam ou excluem, o exemplo cria entidades falsas, como novos usuários ou grupos, para não afetar os dados reais da conta. 
 
 O exemplo pode deixar tais entidades falsas em sua conta, se você escolher histórias que criam ou atualizam entidades. Por exemplo, ao escolher a história de execução ‘atualizar grupo’ cria um novo grupo e, em seguida, atualiza-o. Nesse caso, o novo grupo permanece na sua conta após o exemplo ser executado.
 
 <a name="add-a-snippet"></a>
-##<a name="add-a-snippet"></a>Adicionar um trecho de código
+## Adicionar um trecho de código
+<a id="add-a-snippet" class="xliff"></a>
 
 Este projeto inclui dois arquivos de trechos de código: 
 
@@ -158,14 +169,16 @@ Se você tem seu próprio trecho de código e quer executá-lo neste projeto, ba
 Você já pode testar seu trecho de código. Ao executar o aplicativo, sua história aparecerá como um novo item. Escolha a caixa de seleção do trecho de código e execute-o. Use isso como uma oportunidade para depurar seu trecho de código.
 
 <a name="questions"></a>
-## <a name="questions-and-comments"></a>Perguntas e comentários
+## Perguntas e comentários
+<a id="questions-and-comments" class="xliff"></a>
 
 Adoraríamos receber seus comentários sobre o Exemplo de Trechos de Código do Microsoft Graph para o projeto Xamarin.Forms. Você pode nos enviar suas perguntas e sugestões por meio da seção [Issues](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues) deste repositório.
 
 Seus comentários são importantes para nós. Junte-se a nós na página [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph). Marque suas perguntas com [MicrosoftGraph].
 
 <a name="contributing"></a>
-## <a name="contributing"></a>Colaboração ##
+## Colaboração
+<a id="contributing" class="xliff"></a> ##
 
 Se quiser contribuir para esse exemplo, confira [CONTRIBUTING.MD](/CONTRIBUTING.md).
 
@@ -173,7 +186,8 @@ Este projeto adotou o [Código de Conduta do Código Aberto da Microsoft](https:
 
 
 <a name="additional-resources"></a>
-## <a name="additional-resources"></a>Recursos adicionais ##
+## Recursos adicionais
+<a id="additional-resources" class="xliff"></a> ##
 
 - [Outros exemplos de conexão usando o Microsoft Graph](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
 - [Visão geral do Microsoft Graph](http://graph.microsoft.io)
@@ -181,7 +195,8 @@ Este projeto adotou o [Código de Conduta do Código Aberto da Microsoft](https:
 - [Centro de Desenvolvimento do Office](http://dev.office.com/)
 
 
-## <a name="copyright"></a>Direitos autorais
-Copyright © 2016 Microsoft. Todos os direitos reservados.
+## Direitos autorais
+<a id="copyright" class="xliff"></a>
+Copyright (c) 2017 Microsoft. Todos os direitos reservados.
 
 

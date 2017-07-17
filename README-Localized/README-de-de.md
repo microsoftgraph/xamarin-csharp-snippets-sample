@@ -1,6 +1,8 @@
-# <a name="microsoft-graph-sdk-snippets-library-for-xamarin.forms"></a>Codeausschnittsbibliothek des Microsoft Graph-SDKs für Xamarin.Forms
+# Codeausschnittsbibliothek des Microsoft Graph-SDKs für Xamarin.Forms
+<a id="microsoft-graph-sdk-snippets-library-for-xamarinforms" class="xliff"></a>
 
-##<a name="table-of-contents"></a>Inhalt
+## Inhalt
+<a id="table-of-contents" class="xliff"></a>
 
 * [Voraussetzungen](#prerequisites)
 * [Registrieren und Konfigurieren der App](#register)
@@ -10,18 +12,22 @@
 * [Hinzufügen eines Codeausschnitts](#add-a-snippet)
 * [Fragen und Kommentare](#questions)
 * [Mitwirkung](#contributing")
-* [Weitere Ressourcen](#additional-resources)
+* [Zusätzliche Ressourcen](#additional-resources)
 
 <a name="introduction"></a> Dieses Beispielprojekt enthält ein Repository von Codeausschnitten, die Microsoft Graph verwenden, um allgemeine Aufgaben, z. B. das Senden von E-Mails, das Verwalten von Gruppen und andere Aktivitäten, aus einer Xamarin.Forms-App heraus auszuführen. Es verwendet das [Microsoft Graph .NET-Client-SDK](https://github.com/microsoftgraph/msgraph-sdk-dotnet), um mit Daten zu arbeiten, die von Microsoft Graph zurückgegeben werden. 
 
 Das Beispiel verwendet die [Microsoft-Authentifizierungsbibliothek (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) für die Authentifizierung. Das MSAL-SDK bietet Features für die Arbeit mit dem [Azure AD v2.0-Endpunkt](https://graph.microsoft.io/en-us/docs/authorization/converged_auth), der es Entwicklern ermöglicht, einen einzelnen Codefluss zu schreiben, der die Authentifizierung sowohl für Geschäfts- oder Schulkonten von Benutzern (Azure Active Directory) als auch für persönliche Konten (Microsoft) verarbeitet, einschließlich Office 365-, Outlook.com- und OneDrive-Konten.
 
-> **Hinweis** Das MSAL-SDK befindet sich derzeit in der Vorabversion und sollte daher nicht in Produktionscode verwendet werden. Es dient hier nur zur Veranschaulichung
+## Wichtiger Hinweis zur MSAL-Vorschau
+<a id="important-note-about-the-msal-preview" class="xliff"></a>
+
+Diese Bibliothek eignet sich für die Verwendung in einer Produktionsumgebung. Wir bieten für diese Bibliothek den gleichen Support auf Produktionsebene wie für alle anderen aktuellen Produktionsbibliotheken. Während der Vorschau nehmen wir möglicherweise Änderungen an der API, dem internen Cacheformat und anderen Mechanismen dieser Bibliothek vor, die Sie zusammen mit Fehlerbehebungen oder Funktionsverbesserungen übernehmen müssen. Dies kann sich auf Ihre Anwendung auswirken. So kann sich eine Änderung des Cacheformats beispielsweise auf die Benutzer auswirken, indem sie sich z. B. erneut anmelden müssen. Eine Änderung der API kann dazu führen, dass Sie den Code aktualisieren müssen. Wenn wir das allgemein verfügbare Release bereitstellen, müssen Sie innerhalb von sechs Monaten auf die allgemein verfügbare Version aktualisieren, da Anwendungen, die mit einer Vorschauversion der Bibliothek erstellt wurden, möglicherweise nicht mehr funktionieren.
 
 In der App wird die Benutzeroberfläche angezeigt, die allgemeine Aufgaben bzw. Stories darstellen. Jede Story besteht aus einem oder mehreren Codeausschnitten. Die Stories werden nach Kontotyp und Berechtigungsstufe gruppiert. Der Benutzer kann sich bei seinem Konto anmelden und die ausgewählten Stories ausführen. Jede Story wird grün angezeigt, wenn sie erfolgreich ist, und rot, wenn sie fehlschlägt. Zusätzliche Informationen werden an das Ausgabefenster gesendet.
 
 <a name="prerequisites"></a>
-## <a name="prerequisites"></a>Anforderungen ##
+## Voraussetzungen
+<a id="prerequisites" class="xliff"></a> ##
 
 Für dieses Beispiel ist Folgendes erforderlich:  
 
@@ -41,7 +47,8 @@ Wenn Sie das iOS-Projekt in diesem Beispiel ausführen möchten, benötigen Sie 
 Sie können den [Visual Studio-Emulator für Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) verwenden, wenn Sie das Android-Projekt ausführen möchten.
 
 <a name="register"></a>
-##<a name="register-and-configure-the-app"></a>Registrieren und Konfigurieren der App
+## Registrieren und Konfigurieren der App
+<a id="register-and-configure-the-app" class="xliff"></a>
 
 1. Melden Sie sich beim [App-Registrierungsportal](https://apps.dev.microsoft.com/) entweder mit Ihrem persönlichen oder geschäftlichen Konto oder mit Ihrem Schulkonto an.
 2. Klicken Sie auf **App hinzufügen**.
@@ -58,7 +65,8 @@ Sie können den [Visual Studio-Emulator für Android](https://www.visualstudio.c
 7. Klicken Sie auf **Speichern**.
 
 <a name="build"></a>
-## <a name="build-and-debug"></a>Erstellen und Debuggen ##
+## Erstellen und Debuggen
+<a id="build-and-debug" class="xliff"></a> ##
 
 **Hinweis:** Wenn beim Installieren der Pakete während des Schritts 2 Fehler angezeigt werden, müssen Sie sicherstellen, dass der lokale Pfad, unter dem Sie die Projektmappe abgelegt haben, weder zu lang noch zu tief ist. Dieses Problem lässt sich beheben, indem Sie den Pfad auf Ihrem Laufwerk verkürzen.
 
@@ -81,7 +89,7 @@ Sie können den [Visual Studio-Emulator für Android](https://www.visualstudio.c
         "https://graph.microsoft.com/Group.ReadWrite.All",
     ```
 
-3. Wählen Sie das auszuführende Projekt aus. Wenn Sie die Option für die universelle Windows-Plattform auswählen, können Sie das Beispiel auf dem lokalen Computer ausführen. Wenn Sie das iOS-Projekt ausführen möchten, müssen Sie eine Verbindung zu einem [Mac herstellen, auf dem die Xamarin-Tools installiert](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) sind. (Sie können diese Lösung auch in Xamarin Studio auf einem Mac öffnen und das Beispiel direkt dort ausführen.) Sie können den [Visual Studio-Emulator für Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) verwenden, wenn Sie das Android-Projekt ausführen möchten. 
+3. Wählen Sie das auszuführende Projekt aus. Wenn Sie die Option für die universelle Windows-Plattform auswählen, können Sie das Beispiel auf dem lokalen Computer ausführen. Wenn Sie das iOS-Projekt ausführen möchten, müssen Sie eine Verbindung zu einem [Mac herstellen, auf dem die Xamarin-Tools installiert](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) sind. (Sie können diese Projektmappe auch in Xamarin Studio auf einem Mac öffnen und das Beispiel direkt dort ausführen.) Sie können den [Visual Studio-Emulator für Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) verwenden, wenn Sie das Android-Projekt ausführen möchten. 
 
     ![Screenshot der Visual Studio-Symbolleiste, wobei iOS als Startprojekt ausgewählt ist.](/readme-images/SelectProject.png "Projekt auswählen in Visual Studio")
 
@@ -89,11 +97,12 @@ Sie können den [Visual Studio-Emulator für Android](https://www.visualstudio.c
     > **Hinweis** Möglicherweise müssen Sie den Buildkonfigurations-Manager öffnen, um sicherzustellen, dass die Build- und Bereitstellungsschritte für das UWP-Projekt ausgewählt sind.
 
 <a name="run"></a>
-## <a name="run-the-sample"></a>Ausführen des Beispiels
+## Ausführen des Beispiels
+<a id="run-the-sample" class="xliff"></a>
 
 Nach dem Start wird in der App eine Liste angezeigt, die allgemeine Benutzeraufgaben bzw. so genannte Stories darstellen. Jede Story besteht aus einem oder mehreren Codeausschnitten. Die Stories werden nach Kontotyp und Berechtigungsstufe gruppiert:
 
-- Aufgaben, die sowohl für Geschäfts- oder Schulkonten als auch für persönliche Konten gelten, z. B. das Abrufen und Senden von E-Mails, das Erstellen von Dateien usw.
+- Aufgaben, die sowohl für Geschäfts- oder Schulkonten als auch für persönliche Konten gelten, z. B. das Abrufen und Seden von E-Mails, das Erstellen von Dateien usw.
 - Aufgaben, die nur für Geschäfts- oder Schulkonten gelten, z. B. das Abrufen eines Vorgesetzten eines Benutzers oder eines Kontofotos.
 - Aufgaben, die nur für Geschäfts- oder Schulkonten mit Administratorberechtigungen gelten, z. B. das Abrufen von Gruppenmitgliedern oder das Erstellen neuer Benutzerkonten.
 
@@ -102,14 +111,16 @@ Wählen Sie die Stories aus, die Sie ausführen möchten, und klicken Sie dann a
 Jede Story wird grün angezeigt, wenn sie erfolgreich ist, und rot, wenn sie fehlschlägt. Zusätzliche Informationen werden an das Ausgabefenster gesendet. 
 
 <a name="#how-the-sample-affects-your-tenant-data"></a>
-##<a name="how-the-sample-affects-your-account-data"></a>Wie sich das Beispiel auf Ihre Kontodaten auswirkt
+##Wie sich das Beispiel auf Ihre Kontodaten auswirkt
+<a id="how-the-sample-affects-your-account-data" class="xliff"></a>
 
 In diesem Beispiel werden Befehle ausgeführt, mit denen Daten erstellt, aktualisiert oder gelöscht werden. Ihre tatsächlichen Kontodaten werden nicht bearbeitet oder gelöscht. Im Rahmen der Ausführung des Beispiels werden in Ihrem Konto jedoch möglicherweise Datenartefakte erstellt und hinterlassen: Beim Ausführen von Befehlen, die Daten erstellen, aktualisieren oder löschen, erstellt das Beispiel gefälschte Entitäten, z. B. als neue Benutzer oder Gruppen, damit Ihre tatsächlichen Kontodaten nicht beeinträchtigt werden. 
 
 Das Beispiel kann solche gefälschten Entitäten in Ihrem Konto hinterlassen, wenn Sie Stories auswählen, die Entitäten erstellen oder aktualisieren. Angenommen, durch Auswählen der Story „Gruppe aktualisieren“ wird eine neue Gruppe erstellt, die dann aktualisiert wird. In diesem Fall bleibt die neue Gruppe in Ihrem Konto, nachdem das Beispiel ausgeführt wurde.
 
 <a name="add-a-snippet"></a>
-##<a name="add-a-snippet"></a>Hinzufügen eines Codeausschnitts
+## Hinzufügen eines Codeausschnitts
+<a id="add-a-snippet" class="xliff"></a>
 
 Dieses Projekt umfasst zwei Codeausschnittdateien: 
 
@@ -158,14 +169,16 @@ Manchmal muss die Story zusätzlich zu dem von Ihnen implementierten Codeausschn
 Jetzt können Sie Ihren Codeausschnitt testen. Wenn Sie die App ausführen, wird Ihre Story als neues Element angezeigt. Aktivieren Sie das Kontrollkästchen für Ihren Codeausschnitt, und führen Sie ihn dann aus. Nutzen Sie diese Gelegenheit, um Ihren Codeausschnitt zu debuggen.
 
 <a name="questions"></a>
-## <a name="questions-and-comments"></a>Fragen und Kommentare
+## Fragen und Kommentare
+<a id="questions-and-comments" class="xliff"></a>
 
 Wir schätzen Ihr Feedback hinsichtlich des Microsoft Graph-Codeausschnittbeispiels für das Xamarin Forms-Projekt. Sie können uns Ihre Fragen und Vorschläge über den Abschnitt [Probleme](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues) dieses Repositorys senden.
 
 Ihr Feedback ist uns wichtig. Nehmen Sie unter [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph) Kontakt mit uns auf. Taggen Sie Ihre Fragen mit [MicrosoftGraph].
 
 <a name="contributing"></a>
-## <a name="contributing"></a>Mitwirkung ##
+## Mitwirkung
+<a id="contributing" class="xliff"></a> ##
 
 Wenn Sie einen Beitrag zu diesem Beispiel leisten möchten, finden Sie unter [CONTRIBUTING.MD](/CONTRIBUTING.md) weitere Informationen.
 
@@ -173,7 +186,8 @@ In diesem Projekt wurden die [Microsoft Open Source-Verhaltensregeln](https://op
 
 
 <a name="additional-resources"></a>
-## <a name="additional-resources"></a>Zusätzliche Ressourcen ##
+## Zusätzliche Ressourcen
+<a id="additional-resources" class="xliff"></a> ##
 
 - [Weitere Microsoft Graph Connect-Beispiele](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
 - [Microsoft Graph-Übersicht](http://graph.microsoft.io)
@@ -181,7 +195,8 @@ In diesem Projekt wurden die [Microsoft Open Source-Verhaltensregeln](https://op
 - [Office Dev Center](http://dev.office.com/)
 
 
-## <a name="copyright"></a>Copyright
-Copyright (c) 2016 Microsoft. Alle Rechte vorbehalten.
+## Copyright
+<a id="copyright" class="xliff"></a>
+Copyright (c) 2017 Microsoft. Alle Rechte vorbehalten.
 
 

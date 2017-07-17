@@ -1,6 +1,8 @@
-# <a name="microsoft-graph-sdk-snippets-library-for-xamarin.forms"></a>Microsoft Graph SDK 程式碼片段程式庫 (適用於 Xamarin.Forms)
+# Microsoft Graph SDK 程式碼片段程式庫 (適用於 Xamarin.Forms)
+<a id="microsoft-graph-sdk-snippets-library-for-xamarinforms" class="xliff"></a>
 
-##<a name="table-of-contents"></a>目錄
+## 目錄
+<a id="table-of-contents" class="xliff"></a>
 
 * [必要條件](#prerequisites)
 * [註冊和設定應用程式](#register)
@@ -16,12 +18,16 @@
 
 範例會使用 [Microsoft 驗證程式庫 (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) 進行驗證。MSAL SDK 提供功能以使用 [Azure AD v2.0 端點](https://graph.microsoft.io/en-us/docs/authorization/converged_auth)，可讓開發人員撰寫單一程式碼流程，處理使用者的工作或學校 (Azure Active Directory) 和個人 (Microsoft) 帳戶的驗證，包括 Office 365、Outlook.com 和 OneDrive 帳戶。
 
-> **附註** MSAL SDK 目前是發行前版本，因此不應該用於實際執行程式碼。在這裡僅供說明目的使用。
+## MSAL 預覽相關的重要事項
+<a id="important-note-about-the-msal-preview" class="xliff"></a>
+
+這個程式庫適合在實際執行環境中使用。 我們為我們目前的實際執行程式庫提供與此程式庫相同的實際執行層級支援。 在預覽期間，我們可能會變更此程式庫的 API、內部快取格式和其他機制，您將必須對此程式庫進行錯誤修復或增強功能。 這可能會影響您的應用程式。 舉例來說，變更快取格式可能會影響您的使用者，例如需要使用者重新登入。 API 變更可能需要更新您的程式碼。 當我們提供「一般可用性」版本時，將要求您在六個月內更新至「一般可用性」版本，因為使用程式庫預覽版本所撰寫的應用程式可能無法運作。
 
 應用程式顯示 UI 代表一般使用者工作，或「故事」。每一個故事是由一或多個程式碼片段所組成。故事是根據帳戶類型和權限層級分組。使用者可以登入其帳戶，並執行選取的故事。如果成功，每個故事會變成綠色，如果失敗則變成紅色。額外的資訊會傳送到 [輸出] 視窗中。
 
 <a name="prerequisites"></a>
-## <a name="prerequisites"></a>必要條件 ##
+## 必要條件
+<a id="prerequisites" class="xliff"></a> ##
 
 此範例需要下列項目：  
 
@@ -41,7 +47,8 @@
 如果您想要執行 Android 專案，您可以使用[適用於 Android 的 Visual Studio 模擬器](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx)。
 
 <a name="register"></a>
-##<a name="register-and-configure-the-app"></a>註冊和設定應用程式
+## 註冊和設定應用程式
+<a id="register-and-configure-the-app" class="xliff"></a>
 
 1. 使用您的個人或工作或學校帳戶登入[應用程式註冊入口網站](https://apps.dev.microsoft.com/)。
 2. 選取 [新增應用程式]****。
@@ -58,7 +65,8 @@
 7. 選取 [儲存]****。
 
 <a name="build"></a>
-## <a name="build-and-debug"></a>建置和偵錯 ##
+## 建置和偵錯
+<a id="build-and-debug" class="xliff"></a> ##
 
 **附註︰**如果您在步驟 2 安裝封裝時看到任何錯誤，請確定您放置解決方案的本機路徑不會太長/太深。將解決方案移靠近您的磁碟機根目錄可解決這個問題。
 
@@ -89,7 +97,8 @@
     > **附註** 您可能必須開啟組建組態管理員，以確定針對 UWP 專案選取建置和部署步驟。
 
 <a name="run"></a>
-## <a name="run-the-sample"></a>執行範例
+## 執行範例
+<a id="run-the-sample" class="xliff"></a>
 
 啟動時，應用程式會顯示清單，代表一般使用者工作，或「故事」。每一個故事是由一或多個程式碼片段所組成。故事是根據帳戶類型和權限層級分組：
 
@@ -102,14 +111,16 @@
 如果成功，每個故事會變成綠色，如果失敗則變成紅色。額外的資訊會傳送到 [輸出] 視窗中。 
 
 <a name="#how-the-sample-affects-your-tenant-data"></a>
-##<a name="how-the-sample-affects-your-account-data"></a>範例如何影響帳戶資料
+##範例如何影響帳戶資料
+<a id="how-the-sample-affects-your-account-data" class="xliff"></a>
 
 這個範例會執行命令，該命令會建立、讀取、更新或刪除資料。無法編輯或刪除您的實際帳戶資料。不過，它可能會在您的帳戶中建立並將資料成品留在其中，作為其作業的一部分︰當執行建立、更新或刪除的命令時，這個範例會建立假的實體，例如新的使用者或群組，如此便不會影響您的實際帳戶資料。 
 
 如果您選擇建立或更新實體的故事，範例可能會在您的帳戶中留下這種假實體。例如，選擇執行「更新群組」故事，會建立新的群組，然後更新它。在此情況下，新的群組在執行範例之後會保留在您的帳戶中。
 
 <a name="add-a-snippet"></a>
-##<a name="add-a-snippet"></a>新增程式碼片段
+## 新增程式碼片段
+<a id="add-a-snippet" class="xliff"></a>
 
 此專案包含兩個程式碼片段檔案︰ 
 
@@ -158,14 +169,16 @@
 現在您可以測試您的程式碼片段。當您執行應用程式時，您的故事會顯示為新的項目。選取您的程式碼片段的核取方塊，然後再執行它。使用這一個機會來偵錯程式碼片段。
 
 <a name="questions"></a>
-## <a name="questions-and-comments"></a>問題和建議
+## 問題和建議
+<a id="questions-and-comments" class="xliff"></a>
 
 我們很樂於收到您對於 Microsoft Graph 程式碼片段範例 (適用於 Xamarin Forms) 專案的意見反應。您可以在此儲存機制的[問題](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues)區段中，將您的問題及建議傳送給我們。
 
 我們很重視您的意見。請透過 [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph) 與我們連絡。以 [MicrosoftGraph] 標記您的問題。
 
 <a name="contributing"></a>
-## <a name="contributing"></a>參與 ##
+## 參與
+<a id="contributing" class="xliff"></a> ##
 
 如果您想要參與這個範例，請參閱 [CONTRIBUTING.MD](/CONTRIBUTING.md)。
 
@@ -173,7 +186,8 @@
 
 
 <a name="additional-resources"></a>
-## <a name="additional-resources"></a>其他資源 ##
+## 其他資源
+<a id="additional-resources" class="xliff"></a> ##
 
 - [其他 Microsoft Graph connect 範例](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
 - [Microsoft Graph 概觀](http://graph.microsoft.io)
@@ -181,7 +195,8 @@
 - [Office 開發人員中心](http://dev.office.com/)
 
 
-## <a name="copyright"></a>著作權
-Copyright (c) 2016 Microsoft.著作權所有，並保留一切權利。
+## 著作權
+<a id="copyright" class="xliff"></a>
+Copyright (c) 2017 Microsoft.著作權所有，並保留一切權利。
 
 

@@ -1,6 +1,8 @@
-# <a name="microsoft-graph-sdk-snippets-library-for-xamarin.forms"></a>Bibliothèque d’extraits de code du kit de développement Microsoft Graph pour Xamarin.Forms
+# Bibliothèque d’extraits de code du kit de développement Microsoft Graph pour Xamarin.Forms
+<a id="microsoft-graph-sdk-snippets-library-for-xamarinforms" class="xliff"></a>
 
-##<a name="table-of-contents"></a>Sommaire
+## Sommaire
+<a id="table-of-contents" class="xliff"></a>
 
 * [Conditions préalables](#prerequisites)
 * [Enregistrement et configuration de l’application](#register)
@@ -16,12 +18,16 @@
 
 L’exemple utilise la [bibliothèque d’authentification Microsoft (MSAL)](https://www.nuget.org/packages/Microsoft.Identity.Client/) pour l’authentification. Le kit de développement logiciel (SDK) MSAL offre des fonctionnalités permettant d’utiliser le [point de terminaison Azure AD v2.0](https://graph.microsoft.io/en-us/docs/authorization/converged_auth), qui permet aux développeurs d’écrire un flux de code unique qui gère l’authentification des comptes professionnels ou scolaires (Azure Active Directory) et personnels (Microsoft), y compris des comptes Office 365, Outlook.com et OneDrive.
 
-> **Remarque** Le kit de développement logiciel MSAL se trouve actuellement dans la version préliminaire et en tant que tel, il ne doit pas être utilisé dans le code de production. Il est utilisé ici à titre indicatif uniquement.
+## Remarque importante à propos de la version d’essai MSAL
+<a id="important-note-about-the-msal-preview" class="xliff"></a>
+
+La bibliothèque peut être utilisée dans un environnement de production. Nous fournissons la même prise en charge du niveau de production pour cette bibliothèque que pour nos bibliothèques de production actuelles. Lors de la version d’essai, nous pouvons apporter des modifications à l’API, au format de cache interne et à d’autres mécanismes de cette bibliothèque que vous devrez prendre en compte avec les correctifs de bogues ou les améliorations de fonctionnalités. Cela peut avoir un impact sur votre application. Par exemple, une modification du format de cache peut avoir un impact sur vos utilisateurs. Par exemple, il peut leur être demandé de se connecter à nouveau. Une modification de l’API peut vous obliger à mettre à jour votre code. Lorsque nous fournissons la version de disponibilité générale, vous devez effectuer une mise à jour vers la version de disponibilité générale dans un délai de six mois, car les applications écrites à l’aide de la version d’évaluation de la bibliothèque ne fonctionneront plus.
 
 L’application affiche l’interface utilisateur représentant les tâches courantes de l’utilisateur, ou « articles ». Chaque article est constitué d’un ou de plusieurs extraits de code. Les articles sont groupés par niveau d’autorisations et type de compte. L’utilisateur peut se connecter à son compte et exécuter les articles sélectionnés. Chaque article devient vert en cas de succès et rouge en cas d’échec. Des informations supplémentaires sont envoyées vers la fenêtre de sortie.
 
 <a name="prerequisites"></a>
-## <a name="prerequisites"></a>Conditions préalables ##
+## Conditions préalables
+<a id="prerequisites" class="xliff"></a> ##
 
 Cet exemple nécessite les éléments suivants :  
 
@@ -41,7 +47,8 @@ Si vous souhaitez exécuter le projet iOS dans cet exemple, vous avez besoin des
 Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) si vous souhaitez exécuter le projet Android.
 
 <a name="register"></a>
-##<a name="register-and-configure-the-app"></a>Enregistrement et configuration de l’application
+## Enregistrement et configuration de l’application
+<a id="register-and-configure-the-app" class="xliff"></a>
 
 1. Connectez-vous au [portail d’inscription des applications](https://apps.dev.microsoft.com/) en utilisant votre compte personnel, professionnel ou scolaire.
 2. Sélectionnez **Ajouter une application**.
@@ -58,7 +65,8 @@ Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.vis
 7. Cliquez sur **Enregistrer**.
 
 <a name="build"></a>
-## <a name="build-and-debug"></a>Création et débogage ##
+## Création et débogage
+<a id="build-and-debug" class="xliff"></a> ##
 
 **Remarque :** si vous constatez des erreurs pendant l’installation des packages à l’étape 2, vérifiez que le chemin d’accès local où vous avez sauvegardé la solution n’est pas trop long/profond. Pour résoudre ce problème, il vous suffit de déplacer la solution dans un dossier plus près du répertoire racine de votre lecteur.
 
@@ -81,7 +89,7 @@ Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.vis
         "https://graph.microsoft.com/Group.ReadWrite.All",
     ```
 
-3. Sélectionnez le projet à exécuter. Si vous sélectionnez l’option Plateforme Windows universelle, vous pouvez exécuter l’exemple sur l’ordinateur local. Si vous souhaitez exécuter le projet iOS, vous devez vous connecter à un [Mac sur lequel les outils de Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) ont été installés. (Vous pouvez également ouvrir cette solution dans Xamarin Studio sur un Mac et exécuter l’exemple directement à partir de là.) Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) si vous souhaitez exécuter le projet Android. 
+3. Sélectionnez le projet à exécuter. Si vous sélectionnez l’option Plateforme Windows universelle, vous pouvez exécuter l’exemple sur l’ordinateur local. Si vous souhaitez exécuter le projet iOS, vous devez vous connecter à un [Mac sur lequel les outils de Xamarin](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) ont été installés. (Vous pouvez également ouvrir cette solution dans Xamarin Studio sur un Mac et exécuter l’exemple directement à partir de là.) Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) si vous souhaitez exécuter le projet Android. 
 
     ![Capture d’écran de la barre d’outils Visual Studio, avec iOS sélectionné comme projet de démarrage.](/readme-images/SelectProject.png "Sélectionnez le projet dans Visual Studio").
 
@@ -89,7 +97,8 @@ Vous pouvez utiliser l’[émulateur Visual Studio pour Android](https://www.vis
     > **Remarque** Vous devrez ouvrir le gestionnaire de configurations de build pour vous assurer que les étapes de création et de déploiement sont sélectionnées pour le projet UWP.
 
 <a name="run"></a>
-## <a name="run-the-sample"></a>Exécution de l’exemple
+## Exécution de l’exemple
+<a id="run-the-sample" class="xliff"></a>
 
 Une fois lancée, l’application affiche une liste représentant les tâches courantes de l’utilisateur ou « articles ». Chaque article est constitué d’un ou de plusieurs extraits de code. Les articles sont groupés par niveau d’autorisations et type de compte :
 
@@ -102,14 +111,16 @@ Sélectionnez les articles que vous souhaitez exécuter et cliquez sur le bouton
 Chaque article devient vert en cas de succès et rouge en cas d’échec. Des informations supplémentaires sont envoyées vers la fenêtre de sortie. 
 
 <a name="#how-the-sample-affects-your-tenant-data"></a>
-##<a name="how-the-sample-affects-your-account-data"></a>Impact de l’exemple sur les données de votre compte
+##Impact de l’exemple sur les données de votre compte
+<a id="how-the-sample-affects-your-account-data" class="xliff"></a>
 
 Cet exemple exécute des commandes qui permettent de créer, lire, mettre à jour ou supprimer des données. Il ne modifie pas et ne supprime pas vos données de compte réelles. Toutefois, il peut créer et laisser des artefacts de données dans votre compte dans le cadre de son fonctionnement : lors de l’exécution des commandes de création, mise à jour ou suppression, l’exemple crée des entités fictives, telles que des utilisateurs ou des groupes, de façon à ne pas affecter vos données de compte réelles. 
 
 L’exemple peut épargner ces entités fictives dans votre compte, si vous choisissez des articles qui créent ou mettent à jour des entités. Par exemple, si vous choisissez d’exécuter l’article « mettre à jour un groupe », un groupe est créé, puis mis à jour. Dans ce cas, le nouveau groupe reste dans votre compte après l’exécution de l’exemple.
 
 <a name="add-a-snippet"></a>
-##<a name="add-a-snippet"></a>Ajout d’un extrait de code
+## Ajout d’un extrait de code
+<a id="add-a-snippet" class="xliff"></a>
 
 Ce projet inclut deux fichiers d’extraits : 
 
@@ -158,14 +169,16 @@ Il peut arriver que votre article nécessite l’exécution d’extraits en plus
 Vous pouvez à présent tester votre extrait de code. Lorsque vous exécutez l’application, votre article s’affiche sous la forme d’un nouvel élément. Activez la case à cocher de votre extrait de code, puis exécutez-le. Utilisez cette option comme une opportunité pour déboguer votre extrait de code.
 
 <a name="questions"></a>
-## <a name="questions-and-comments"></a>Questions et commentaires
+## Questions et commentaires
+<a id="questions-and-comments" class="xliff"></a>
 
 Nous serions ravis de connaître votre opinion sur l’exemple d’extraits de code Microsoft Graph pour Xamarin.Forms. Vous pouvez nous faire part de vos questions et suggestions dans la rubrique [Problèmes](https://github.com/MicrosoftGraph/xamarin-csharp-snippets-sample/issues) de ce référentiel.
 
 Votre avis compte beaucoup pour nous. Communiquez avec nous sur [Stack Overflow](http://stackoverflow.com/questions/tagged/office365+or+microsoftgraph). Posez vos questions avec la balise [MicrosoftGraph].
 
 <a name="contributing"></a>
-## <a name="contributing"></a>Contribution ##
+## Contribution
+<a id="contributing" class="xliff"></a> ##
 
 Si vous souhaitez contribuer à cet exemple, voir [CONTRIBUTING.MD](/CONTRIBUTING.md).
 
@@ -173,7 +186,8 @@ Ce projet a adopté le [code de conduite Microsoft Open Source](https://opensour
 
 
 <a name="additional-resources"></a>
-## <a name="additional-resources"></a>Ressources supplémentaires ##
+## Ressources supplémentaires
+<a id="additional-resources" class="xliff"></a> ##
 
 - [Autres exemples de connexion avec Microsoft Graph](https://github.com/MicrosoftGraph?utf8=%E2%9C%93&query=-Connect)
 - [Présentation de Microsoft Graph](http://graph.microsoft.io)
@@ -181,7 +195,8 @@ Ce projet a adopté le [code de conduite Microsoft Open Source](https://opensour
 - [Centre de développement Office](http://dev.office.com/)
 
 
-## <a name="copyright"></a>Copyright
-Copyright (c) 2016 Microsoft. Tous droits réservés.
+## Copyright
+<a id="copyright" class="xliff"></a>
+Copyright (c) 2017 Microsoft. Tous droits réservés.
 
 
