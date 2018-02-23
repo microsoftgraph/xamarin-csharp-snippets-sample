@@ -1,7 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
-    "UAP,Version=v10.0": {
+    "UAP,Version=v10.0.10586": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -29,7 +29,7 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.1.0-preview": {
+      "Microsoft.Identity.Client/1.1.2-preview0008": {
         "type": "package",
         "compile": {
           "lib/win81/Microsoft.Identity.Client.dll": {}
@@ -1915,7 +1915,7 @@
         "type": "project"
       }
     },
-    "UAP,Version=v10.0/win10-arm": {
+    "UAP,Version=v10.0.10586/win10-arm": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -1943,7 +1943,7 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.1.0-preview": {
+      "Microsoft.Identity.Client/1.1.2-preview0008": {
         "type": "package",
         "compile": {
           "lib/win81/Microsoft.Identity.Client.dll": {}
@@ -3686,7 +3686,7 @@
         "type": "project"
       }
     },
-    "UAP,Version=v10.0/win10-arm-aot": {
+    "UAP,Version=v10.0.10586/win10-arm-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3714,7 +3714,7 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.1.0-preview": {
+      "Microsoft.Identity.Client/1.1.2-preview0008": {
         "type": "package",
         "compile": {
           "lib/win81/Microsoft.Identity.Client.dll": {}
@@ -5420,7 +5420,7 @@
         "type": "project"
       }
     },
-    "UAP,Version=v10.0/win10-x64": {
+    "UAP,Version=v10.0.10586/win10-x64": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -5448,7 +5448,7 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.1.0-preview": {
+      "Microsoft.Identity.Client/1.1.2-preview0008": {
         "type": "package",
         "compile": {
           "lib/win81/Microsoft.Identity.Client.dll": {}
@@ -7198,7 +7198,7 @@
         "type": "project"
       }
     },
-    "UAP,Version=v10.0/win10-x64-aot": {
+    "UAP,Version=v10.0.10586/win10-x64-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -7226,7 +7226,7 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.1.0-preview": {
+      "Microsoft.Identity.Client/1.1.2-preview0008": {
         "type": "package",
         "compile": {
           "lib/win81/Microsoft.Identity.Client.dll": {}
@@ -8932,7 +8932,7 @@
         "type": "project"
       }
     },
-    "UAP,Version=v10.0/win10-x86": {
+    "UAP,Version=v10.0.10586/win10-x86": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -8960,7 +8960,7 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.1.0-preview": {
+      "Microsoft.Identity.Client/1.1.2-preview0008": {
         "type": "package",
         "compile": {
           "lib/win81/Microsoft.Identity.Client.dll": {}
@@ -10710,7 +10710,7 @@
         "type": "project"
       }
     },
-    "UAP,Version=v10.0/win10-x86-aot": {
+    "UAP,Version=v10.0.10586/win10-x86-aot": {
       "Microsoft.CSharp/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -10738,7 +10738,7 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Identity.Client/1.1.0-preview": {
+      "Microsoft.Identity.Client/1.1.2-preview0008": {
         "type": "package",
         "compile": {
           "lib/win81/Microsoft.Identity.Client.dll": {}
@@ -12486,25 +12486,21 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "Microsoft.Identity.Client/1.1.0-preview": {
-      "sha512": "LM/xTx2B87kzOyvoHmMAJG0wPjEIRadvQ+hLj200/eKsQvqecaxh1R4fwWH711zObPxzr1iLzdDWoEYi46uqpg==",
+    "Microsoft.Identity.Client/1.1.2-preview0008": {
+      "sha512": "bzcLQcBbyaQ5qVCTj2Tewb6JF51tRi33cqvMfy+CkZzZbdHqKlY6lv42Tm6B4kfWMvySsHj4O5kR9BSSipocMg==",
       "type": "package",
-      "path": "microsoft.identity.client/1.1.0-preview",
+      "path": "microsoft.identity.client/1.1.2-preview0008",
       "files": [
-        "lib/monoandroid70/Microsoft.Identity.Client.dll",
-        "lib/monoandroid70/Microsoft.Identity.Client.xml",
+        "Microsoft.Identity.Client.dll",
+        "Microsoft.Identity.Client.pri",
+        "Microsoft.Identity.Client.xml",
+        "lib/monoandroid7/Microsoft.Identity.Client.dll",
         "lib/net45/Microsoft.Identity.Client.dll",
-        "lib/net45/Microsoft.Identity.Client.xml",
         "lib/netstandard1.1/Microsoft.Identity.Client.dll",
-        "lib/netstandard1.1/Microsoft.Identity.Client.xml",
         "lib/netstandard1.3/Microsoft.Identity.Client.dll",
-        "lib/netstandard1.3/Microsoft.Identity.Client.xml",
         "lib/win81/Microsoft.Identity.Client.dll",
-        "lib/win81/Microsoft.Identity.Client.pri",
-        "lib/win81/Microsoft.Identity.Client.xml",
-        "lib/xamarinios10/Microsoft.Identity.Client.dll",
-        "lib/xamarinios10/Microsoft.Identity.Client.xml",
-        "microsoft.identity.client.1.1.0-preview.nupkg.sha512",
+        "lib/xamarin.ios10/Microsoft.Identity.Client.dll",
+        "microsoft.identity.client.1.1.2-preview0008.nupkg.sha512",
         "microsoft.identity.client.nuspec"
       ]
     },
@@ -15818,11 +15814,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.Identity.Client >= 1.1.0-preview",
+      "Microsoft.Identity.Client >= 1.1.2-preview0008",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0",
       "Xamarin.Forms >= 2.0.0.6482"
     ],
-    "UAP,Version=v10.0": []
+    "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
     "C:\\Users\\jamescro\\.nuget\\packages\\": {}
@@ -15833,9 +15829,20 @@
       "projectName": "Graph_Xamarin_CS_Snippets.UWP",
       "projectPath": "C:\\xamarin-csharp-snippets-sample\\Graph-Xamarin-CS-Snippets\\Graph-Xamarin-CS-Snippets\\Graph_Xamarin_CS_Snippets.UWP\\Graph_Xamarin_CS_Snippets.UWP.csproj",
       "projectJsonPath": "C:\\xamarin-csharp-snippets-sample\\Graph-Xamarin-CS-Snippets\\Graph-Xamarin-CS-Snippets\\Graph_Xamarin_CS_Snippets.UWP\\project.json",
+      "packagesPath": "C:\\Users\\jamescro\\.nuget\\packages\\",
+      "outputPath": "C:\\xamarin-csharp-snippets-sample\\Graph-Xamarin-CS-Snippets\\Graph-Xamarin-CS-Snippets\\Graph_Xamarin_CS_Snippets.UWP\\obj\\",
       "projectStyle": "ProjectJson",
+      "configFilePaths": [
+        "C:\\Users\\jamescro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/aad-clients-nightly/api/v2": {}
+      },
       "frameworks": {
-        "uap10.0": {
+        "uap10.0.10586": {
           "projectReferences": {
             "C:\\xamarin-csharp-snippets-sample\\Graph-Xamarin-CS-Snippets\\Graph-Xamarin-CS-Snippets\\Graph_Xamarin_CS_Snippets\\Graph_Xamarin_CS_Snippets.csproj": {
               "projectPath": "C:\\xamarin-csharp-snippets-sample\\Graph-Xamarin-CS-Snippets\\Graph-Xamarin-CS-Snippets\\Graph_Xamarin_CS_Snippets\\Graph_Xamarin_CS_Snippets.csproj"
@@ -15845,12 +15852,12 @@
       }
     },
     "dependencies": {
-      "Microsoft.Identity.Client": "1.1.0-preview",
+      "Microsoft.Identity.Client": "1.1.2-preview0008",
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
       "Xamarin.Forms": "2.0.0.6482"
     },
     "frameworks": {
-      "uap10.0": {}
+      "uap10.0.10586": {}
     },
     "runtimes": {
       "win10-arm": {

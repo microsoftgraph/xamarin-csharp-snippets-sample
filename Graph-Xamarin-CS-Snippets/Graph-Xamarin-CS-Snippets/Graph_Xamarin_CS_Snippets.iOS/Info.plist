@@ -36,7 +36,7 @@
    </array>
 
     <key>MinimumOSVersion</key>
-    <string>6.0</string>
+    <string>7.0</string>
     <key>CFBundleDisplayName</key>
     <string>Graph_Xamarin_CS_Snippets</string>
     <key>CFBundleIdentifier</key>
