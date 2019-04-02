@@ -15,6 +15,7 @@ namespace Graph_Xamarin_CS_Snippets
     {
         public static PublicClientApplication IdentityClientApp = null;
         public static string ClientID = "ENTER_YOUR_CLIENT_ID";
+        
         public static string RedirectUri = "msal" + ClientID + "://auth";
         public static UIParent UiParent = null;
         public static string[] Scopes = {

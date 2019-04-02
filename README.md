@@ -44,21 +44,31 @@ If you want to run the iOS project in this sample, you'll need the following:
 You can use the [Visual Studio Emulator for Android](https://www.visualstudio.com/features/msft-android-emulator-vs.aspx) if you want to run the Android project.
 
 <a name="register"></a>
-## Register and configure the app
 
-1. Sign into the [App Registration Portal](https://apps.dev.microsoft.com/) using either your personal or work or school account.
-2. Select **Add an app**.
-3. Enter a name for the app, and select **Create application**.
-	
-	The registration page displays, listing the properties of your app.
+## Register the application 
  
-4. Under **Platforms**, select **Add platform**.
-5. Select **Mobile application**.
-6. Copy the Client Id (App Id) value to the clipboard. You'll need to enter these values into the sample app.
-
-	The app id is a unique identifier for your app.
-
-7. Select **Save**.
+1. Navigate to the [the Azure portal - App registrations](https://go.microsoft.com/fwlink/?linkid=2083908) to register your app. Login using a **Work or School Account**. 
+ 
+2. Select **New registration**. On the **Register an application** page, set the values as follows. 
+ 
+* Set **Name** to **Graph-Xamarin-CS-Snippets**. 
+* Set **Supported account types** to **Accounts in any organizational directory**. 
+* Leave **Redirect URI** empty. 
+* Choose **Register**. 
+ 
+3. On the **Graph-Xamarin-CS-Snippets** page, copy and save the values for the **Application (client) ID** and the **Directory (tenant) ID**. You will need them in step 7. 
+ 
+4. Select **Certificates & secrets** under **Manage**. Select the **New client secret** button. Enter a value in **Description**, select any option for **Expires** and choose **Add**. 
+ 
+5. Copy the client secret value before leaving the page. You will need it in the next step. 
+ 
+6. Open the sample solution in Visual Studio and then open the **App.cs** file. Change the **CliendID** string to the **Application (client) ID** value.
+ 
+7. Return to the Azure Active Directory management center. Select **API permissions** and then select **Add a permission**. On the panel that appears, choose **Microsoft Graph** and then choose **Application permissions**. 
+ 
+8. Use the **Select permissions** search box to search for the following permissions: User.Read, Group.ReadWrite.All, Sites.Read.All, Files.ReadWrite.All, Tasks.ReadWrite, Directory.Read.All. Select the check box for each permission as it appears (note that the permissions will not remain visible in the list as you select each one). Select the **Add permissions** button at the bottom of the panel. 
+ 
+9. Choose the **Grant admin consent for [tenant name]** button. Select **Yes** for the confirmation that appears.
 
 <a name="build"></a>
 ## Build and debug ##
