@@ -12,7 +12,6 @@ using Microsoft.Identity.Client;
 using System.Net.Http.Headers;
 using System.Resources;
 using System.Globalization;
-using Graph_Xamarin_CS_Snippets;
 using Xamarin.Forms;
 
 namespace Graph_Xamarin_CS_Snippets

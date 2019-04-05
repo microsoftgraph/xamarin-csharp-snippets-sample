@@ -7,6 +7,8 @@ using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.Identity.Client;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Graph_Xamarin_CS_Snippets
 {
@@ -71,12 +73,15 @@ namespace Graph_Xamarin_CS_Snippets
         /// <summary>
         /// Signs the user out of the service.
         /// </summary>
-        public static void SignOut()
+        public async static void SignOut()
         {
-            foreach (var user in App.IdentityClientApp.Users)
-            {
-                App.IdentityClientApp.Remove(user);
+            IEnumerable<IAccount> accounts = await App.IdentityClientApp.GetAccountsAsync();
+
+            foreach (var account in accounts)
+            {               
+                await App.IdentityClientApp.RemoveAsync(account);
             }
+
             graphClient = null;
             TokenForUser = null;
 
